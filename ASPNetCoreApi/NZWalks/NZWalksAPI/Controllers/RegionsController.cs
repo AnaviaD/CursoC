@@ -44,6 +44,9 @@ namespace NZWalksAPI.Controllers
             return Ok(regionsDto);
         }
 
+
+        //Get All Regions method
+        //  https://localhost:portnumber/api/regions/{id}
         [HttpGet]
         [Route("{id:Guid}")]
         public IActionResult GetById([FromRoute] Guid id)
@@ -70,6 +73,37 @@ namespace NZWalksAPI.Controllers
         }
 
 
+
+        //POST to create new Region
+        //POST   https://localhost:portnumber/api/regions
+        [HttpPost]
+        public IActionResult Create([FromBody] AddRegionRequestDto addRegion)
+        {
+            //Map or Convert to Domain Model
+            var regionDomainModel = new Region
+            {
+                Code = addRegion.Code,
+                Name = addRegion.Name,
+                RegionImageUrl = addRegion.RegionImageUrl
+            };
+
+
+            //Use Domain Model to create Region
+            dbContext.Regions.Add(regionDomainModel);
+            dbContext.SaveChanges();
+
+            //Map Domain model back to DTO
+            var regionDto = new RegionDto 
+            {
+                Id = regionDomainModel.Id,
+                Code = regionDomainModel.Code,
+                Name = regionDomainModel.Name,
+                RegionImageUrl = regionDomainModel.RegionImageUrl
+            };
+
+            return CreatedAtAction(nameof(GetById), new {id = regionDomainModel.Id}, regionDto);
+
+        }
 
 
         ////Get All Regions method
