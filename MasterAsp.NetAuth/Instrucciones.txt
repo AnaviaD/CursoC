@@ -1,0 +1,2 @@
+Este proyecto necesita .NetCore 8
+VSC necesita ser al menos la version 17.5
