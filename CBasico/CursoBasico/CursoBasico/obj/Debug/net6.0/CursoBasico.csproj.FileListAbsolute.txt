@@ -1,0 +1,14 @@
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\bin\Debug\net6.0\CursoBasico.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\bin\Debug\net6.0\CursoBasico.deps.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\bin\Debug\net6.0\CursoBasico.runtimeconfig.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\bin\Debug\net6.0\CursoBasico.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\bin\Debug\net6.0\CursoBasico.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.AssemblyInfoInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.AssemblyInfo.cs
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.csproj.CoreCompileInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\refint\CursoBasico.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.genruntimeconfig.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\ref\CursoBasico.dll
