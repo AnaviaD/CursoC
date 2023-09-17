@@ -1,0 +1,17 @@
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\bin\Debug\net6.0-windows\IntercambioAdmin.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\bin\Debug\net6.0-windows\IntercambioAdmin.deps.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\bin\Debug\net6.0-windows\IntercambioAdmin.runtimeconfig.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\bin\Debug\net6.0-windows\IntercambioAdmin.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\bin\Debug\net6.0-windows\IntercambioAdmin.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.Form1.resources
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.csproj.GenerateResource.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.AssemblyInfoInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.AssemblyInfo.cs
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.csproj.CoreCompileInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\refint\IntercambioAdmin.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.genruntimeconfig.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\ref\IntercambioAdmin.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\IntercaMaster\IntercambioAdmin\IntercambioAdmin\obj\Debug\net6.0-windows\IntercambioAdmin.Forms.AdminWindow.resources
