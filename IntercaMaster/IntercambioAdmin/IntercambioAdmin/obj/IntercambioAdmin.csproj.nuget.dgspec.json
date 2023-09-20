@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj": {}
+    "C:\\Users\\eanavia\\OneDrive - Fletes y Transportes Ruiz S.A de C.V\\Escritorio\\Projects\\CursoC\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj": {
+    "C:\\Users\\eanavia\\OneDrive - Fletes y Transportes Ruiz S.A de C.V\\Escritorio\\Projects\\CursoC\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj",
+        "projectUniqueName": "C:\\Users\\eanavia\\OneDrive - Fletes y Transportes Ruiz S.A de C.V\\Escritorio\\Projects\\CursoC\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj",
         "projectName": "IntercambioAdmin",
-        "projectPath": "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj",
-        "packagesPath": "C:\\Users\\anavi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\obj\\",
+        "projectPath": "C:\\Users\\eanavia\\OneDrive - Fletes y Transportes Ruiz S.A de C.V\\Escritorio\\Projects\\CursoC\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\IntercambioAdmin.csproj",
+        "packagesPath": "C:\\Users\\eanavia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eanavia\\OneDrive - Fletes y Transportes Ruiz S.A de C.V\\Escritorio\\Projects\\CursoC\\CursoC\\IntercaMaster\\IntercambioAdmin\\IntercambioAdmin\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\anavi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\eanavia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
