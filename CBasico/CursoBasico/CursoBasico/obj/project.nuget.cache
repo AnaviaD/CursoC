@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DbVF4O/xtYYoN2xcpY0p0/lTBCDGcg5lVJG6e4VXmag1nSBdA4wTOPpToFX3mMgT87OseO6V58Y7RtVJ6HKj2A==",
+  "dgSpecHash": "ypyHCz4DPymda5z/O00j+RVQDSZP07sIkpygEht+u8xLgGiT2Svly566GO7rassVSNx9J9tvD1g8LMHiRdJYXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\CBasico\\CursoBasico\\CursoBasico\\CursoBasico.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\anavi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\anavi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\anavi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\anavi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.20\\microsoft.netcore.app.host.win-x64.6.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
