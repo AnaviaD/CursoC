@@ -1,0 +1,17 @@
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\StopWatch.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\StopWatch.deps.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\StopWatch.runtimeconfig.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\StopWatch.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\StopWatch.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.Form1.resources
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.csproj.GenerateResource.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.AssemblyInfoInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.AssemblyInfo.cs
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.csproj.CoreCompileInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.sourcelink.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\refint\StopWatch.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.genruntimeconfig.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\ref\StopWatch.dll
