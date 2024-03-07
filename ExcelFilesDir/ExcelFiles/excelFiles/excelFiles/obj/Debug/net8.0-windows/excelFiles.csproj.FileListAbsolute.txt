@@ -1,0 +1,17 @@
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\bin\Debug\net8.0-windows\excelFiles.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\bin\Debug\net8.0-windows\excelFiles.deps.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\bin\Debug\net8.0-windows\excelFiles.runtimeconfig.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\bin\Debug\net8.0-windows\excelFiles.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\bin\Debug\net8.0-windows\excelFiles.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.Form1.resources
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.csproj.GenerateResource.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.AssemblyInfoInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.AssemblyInfo.cs
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.csproj.CoreCompileInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.sourcelink.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\refint\excelFiles.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\excelFiles.genruntimeconfig.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\obj\Debug\net8.0-windows\ref\excelFiles.dll
