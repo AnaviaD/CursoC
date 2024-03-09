@@ -1,3 +1,5 @@
+using excelFiles.Helpers;
+
 namespace excelFiles
 {
     public partial class Form1 : Form
@@ -15,13 +17,17 @@ namespace excelFiles
 
         private void textBox1_DragDrop(object sender, DragEventArgs e)
         {
+            lectorMaestro lector = new lectorMaestro();
+
             string[] archivos = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
-            string linea = "";
 
-            foreach (string archivo in archivos)
+            string[] archivosXLSX = Array.FindAll(archivos, s => s.EndsWith(".xlsx", StringComparison.OrdinalIgnoreCase));
+
+            // Iterar sobre los archivos .xlsx y pasar la dirección a la función lector
+            foreach (string archivo in archivosXLSX)
             {
-
+                lector.ProcesoExcelM(archivo);
             }
         }
     }
