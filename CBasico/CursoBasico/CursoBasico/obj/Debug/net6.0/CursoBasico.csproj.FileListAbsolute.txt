@@ -12,3 +12,4 @@ C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasi
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.pdb
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.genruntimeconfig.cache
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\ref\CursoBasico.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CBasico\CursoBasico\CursoBasico\obj\Debug\net6.0\CursoBasico.sourcelink.json
