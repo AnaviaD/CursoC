@@ -1,4 +1,5 @@
 using excelFiles.Helpers;
+using System.Data;
 
 namespace excelFiles
 {
@@ -27,7 +28,9 @@ namespace excelFiles
             // Iterar sobre los archivos .xlsx y pasar la dirección a la función lector
             foreach (string archivo in archivosXLSX)
             {
-                lector.ProcesoExcelM(archivo);
+                DataTable dirtyTable = new DataTable();
+                dirtyTable = lector.ProcesoExcelM(archivo);
+                lector.BuscadorHeaders(dirtyTable);
             }
         }
     }
