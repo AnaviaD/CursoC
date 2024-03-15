@@ -159,87 +159,93 @@ namespace excelFiles.Helpers
         }
 
 
+        public void BuscarEnTabla(DataTable tablaTest)
+        {
+
+        }
+
+
         public void BuscadorHeaders(DataTable tablaTest)
         {
-            List<List<string>> headersList = new List<List<string>>();
-            List<string> jsonConfList = new List<string>();
+            //List<List<string>> headersList = new List<List<string>>();
+            //List<string> jsonConfList = new List<string>();
 
-            List<string> dhlHeaders = Headers.DHL_H;
-            List<string> genericHeaders = Headers.DHL_H;
+            //List<string> dhlHeaders = Headers.DHL_H;
+            //List<string> genericHeaders = Headers.DHL_H;
 
-            headersList.Add(dhlHeaders);
-            headersList.Add(genericHeaders);
+            //headersList.Add(dhlHeaders);
+            //headersList.Add(genericHeaders);
 
-            try
-            {
-                foreach (var listaCliente in headersList)
-                {
-                    //Iniciamos el contador para saber donde inician los headers
-                    int contador = 1;
+            //try
+            //{
+            //    foreach (var listaCliente in headersList)
+            //    {
+            //        //Iniciamos el contador para saber donde inician los headers
+            //        int contador = 1;
 
-                    //Aqui vamos a intentar localizar los headers haciendo un recorrido por cada row.
-                    foreach (DataRow row in tablaTest.Rows)
-                    {
-                        List<string> listaPosibleHeader = new List<string>();
-                        List<int> posicionesCoincidencias = new List<int>();
+            //        //Aqui vamos a intentar localizar los headers haciendo un recorrido por cada row.
+            //        foreach (DataRow row in tablaTest.Rows)
+            //        {
+            //            List<string> listaPosibleHeader = new List<string>();
+            //            List<int> posicionesCoincidencias = new List<int>();
 
-                        foreach (DataColumn column in tablaTest.Columns)
-                        {
-                            //  Agregar el valor de la columna a la lista
-                            listaPosibleHeader.Add((string)row[column]);
-                        }
+            //            foreach (DataColumn column in tablaTest.Columns)
+            //            {
+            //                //  Agregar el valor de la columna a la lista
+            //                listaPosibleHeader.Add((string)row[column]);
+            //            }
 
-                        //  Nos dice si encontro algo en la lista
-                        if (listaCliente.Intersect(listaPosibleHeader).Any())
-                        {
-                            /*
-                            Aqui vamos a evaluar las listas
-                            Iterar sobre los elementos de la lista molde
-                            */
-                            foreach (var elemento in listaCliente)
-                            {
-                                //  Buscar la posición del elemento en la lista a evaluar
-                                int posicionEnListaAEvaluar = listaPosibleHeader.IndexOf(elemento);
+            //            //  Nos dice si encontro algo en la lista
+            //            if (listaCliente.Intersect(listaPosibleHeader).Any())
+            //            {
+            //                /*
+            //                Aqui vamos a evaluar las listas
+            //                Iterar sobre los elementos de la lista molde
+            //                */
+            //                foreach (var elemento in listaCliente)
+            //                {
+            //                    //  Buscar la posición del elemento en la lista a evaluar
+            //                    int posicionEnListaAEvaluar = listaPosibleHeader.IndexOf(elemento);
 
-                                //  Agregar la posición donde se encontró la coincidencia
-                                posicionesCoincidencias.Add(posicionEnListaAEvaluar);
-                            }
+            //                    //  Agregar la posición donde se encontró la coincidencia
+            //                    posicionesCoincidencias.Add(posicionEnListaAEvaluar);
+            //                }
 
-                            //  Aqui deberiamos evaluar que cosas guardar o num de coincidencias
-
-
-                            //  Aqui guardaremos el resultado de las listas
-                            var objetoJSON = new
-                            {
-                                matches = posicionesCoincidencias.Count(num => num != -1),
-                                listaHeaders = listaCliente,
-                                posiciones = posicionesCoincidencias,
-                                inicioHead = contador
-                            };
-
-                            // Convertir el objeto JSON a formato string y agregarlo a la lista
-                            string json = JsonConvert.SerializeObject(objetoJSON);
-                            jsonConfList.Add(json);
-                        }
-                        //  Aqui evaluaremos que hacer con los elementos de las listas
-
-                    }
-                    //  Contador de header
-                    contador++;
-                }
-                //Aqui nos decidimos por un objeto de la lista
-                var jsonConfObj = ObtenerDatosJson(jsonConfList);
-                //Aqui intentaremos abrir el Json y darle valores generales a las variables que nos importan
-                GeneralizarHeadersJson(jsonConfObj);
+            //                //  Aqui deberiamos evaluar que cosas guardar o num de coincidencias
 
 
-                Console.WriteLine(jsonConfList.ToString());
-            }
-            catch (Exception ex)
-            {
-                escribirEnLog.Add(string.Format("{0} - Error Al leer archivo {1} ", DateTime.Now, ex.ToString()));
-                throw;
-            }
+            //                //  Aqui guardaremos el resultado de las listas
+            //                var objetoJSON = new
+            //                {
+            //                    matches = posicionesCoincidencias.Count(num => num != -1),
+            //                    listaHeaders = listaCliente,
+            //                    posiciones = posicionesCoincidencias,
+            //                    inicioHead = contador
+            //                };
+
+            //                // Convertir el objeto JSON a formato string y agregarlo a la lista
+            //                string json = JsonConvert.SerializeObject(objetoJSON);
+            //                jsonConfList.Add(json);
+            //            }
+            //            //  Aqui evaluaremos que hacer con los elementos de las listas
+
+            //        }
+            //        //  Contador de header
+            //        contador++;
+            //    }
+            //    //Aqui nos decidimos por un objeto de la lista
+            //    var jsonConfObj = ObtenerDatosJson(jsonConfList);
+            //    //Aqui intentaremos abrir el Json y darle valores generales a las variables que nos importan
+            //    GeneralizarHeadersJson(jsonConfObj);
+
+
+            //    Console.WriteLine(jsonConfList.ToString());
+            //}
+            //catch (Exception ex)
+            //{
+            //    escribirEnLog.Add(string.Format("{0} - Error Al leer archivo {1} ", DateTime.Now, ex.ToString()));
+            //    throw;
+            //}
         }
 
 
