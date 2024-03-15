@@ -161,7 +161,54 @@ namespace excelFiles.Helpers
 
         public void BuscarEnTabla(DataTable tablaTest)
         {
+            // Lista para almacenar objetos JSON con la posición de la celda
+            List<string> objetosJson = new List<string>();
 
+            // Recorre el DataTable posición por posición
+            for (int i = 0; i < tablaTest.Rows.Count; i++)
+            {
+                for (int j = 0; j < tablaTest.Columns.Count; j++)
+                {
+                    // Obtén el texto de la celda en la posición (i, j)
+                    string textoCelda = tablaTest.Rows[i][j].ToString();
+
+                    // Llama a la función con el texto de la celda
+                    string resultadoFuncion = BuscarEnHeaders(textoCelda);
+
+                    // Verifica si la función regresó un objeto JSON no vacío
+                    if (!string.IsNullOrEmpty(resultadoFuncion))
+                    {
+                        // Deserializa el objeto JSON y agrega la posición de la matriz
+                        dynamic objetoDeserializado = JsonConvert.DeserializeObject(resultadoFuncion);
+                        objetoDeserializado["posicion"] = $"({i}, {j})";
+
+                        // Agrega el objeto JSON modificado a la lista
+                        objetosJson.Add(JsonConvert.SerializeObject(objetoDeserializado));
+                    }
+                }
+            }
+
+        }
+
+
+        public string BuscarEnHeaders(string contenidoCelda)
+        {
+            List<List<string>> listaSuprema = Headers.HeadList;
+            Dictionary<string, object> resultDict = new Dictionary<string, object>();
+
+            for (int i = 0; i < listaSuprema.Count; i++)
+            {
+                if (listaSuprema[i].Contains(contenidoCelda))
+                {
+                    // Encontró la palabra, agregue el índice o el nombre de la lista a un JSON
+                    resultDict[contenidoCelda] = i; // Puedes usar i o el nombre de la lista, según lo que prefieras
+                }
+            }
+
+            // Convierte el diccionario a JSON
+            string jsonResult = JsonConvert.SerializeObject(resultDict);
+
+            return jsonResult;
         }
 
 
