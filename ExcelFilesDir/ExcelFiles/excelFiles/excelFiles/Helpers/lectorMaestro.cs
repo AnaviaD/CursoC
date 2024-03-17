@@ -1,5 +1,6 @@
 ﻿using excelFiles.Clases;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using OfficeOpenXml;
 using System.Data;
 using System.Text.RegularExpressions;
@@ -165,43 +166,353 @@ namespace excelFiles.Helpers
             List<string> objetosJson = new List<string>();
 
             // Recorre el DataTable posición por posición
-            for (int i = 0; i < tablaTest.Rows.Count; i++)
+            for (int rows = 0; rows < tablaTest.Rows.Count; rows++)
             {
-                for (int j = 0; j < tablaTest.Columns.Count; j++)
+                for (int cols = 0; cols < tablaTest.Columns.Count; cols++)
                 {
                     // Obtén el texto de la celda en la posición (i, j)
-                    string textoCelda = tablaTest.Rows[i][j].ToString();
+                    string textoCelda = tablaTest.Rows[rows][cols].ToString();
 
                     // Llama a la función con el texto de la celda
                     string resultadoFuncion = BuscarEnHeaders(textoCelda);
 
                     // Verifica si la función regresó un objeto JSON no vacío
-                    if (!string.IsNullOrEmpty(resultadoFuncion))
+                    if (!string.IsNullOrEmpty(resultadoFuncion) && resultadoFuncion != "{}")
                     {
+                        // Obtener contenido de la fila actual como lista de strings
+                        List<string> filaActual         = ObtenerFilaComoLista(tablaTest, rows, cols);
+                        // Obtener contenido de la columna actual como lista de strings
+                        List<string> columnaActual      = ObtenerColumnaComoLista(tablaTest, cols, rows);                        
+
+
+
                         // Deserializa el objeto JSON y agrega la posición de la matriz
                         dynamic objetoDeserializado = JsonConvert.DeserializeObject(resultadoFuncion);
-                        objetoDeserializado["posicion"] = $"({i}, {j})";
+                        objetoDeserializado["posicion"]         = $"({rows}, {cols})";
+
+                        // Llamar a la función que maneja la fila actual
+                        objetoDeserializado["filas"]            = JArray.FromObject(LimpiarLista(filaActual, resultadoFuncion));
+
+                        // Llamar a la función que maneja la columna actual
+                        objetoDeserializado["columnas"]         = JArray.FromObject(LimpiarLista(columnaActual, resultadoFuncion));
 
                         // Agrega el objeto JSON modificado a la lista
                         objetosJson.Add(JsonConvert.SerializeObject(objetoDeserializado));
                     }
                 }
             }
+        }
+
+
+        // Función para obtener el contenido de una fila del DataTable como lista de strings
+        private List<string> ObtenerFilaComoLista(DataTable tabla, int indiceFila, int col)
+        {
+            List<string> fila = new List<string>();
+            int indice = 0;
+            foreach (DataColumn columna in tabla.Columns)
+            {
+                if (indice >= col)
+                {
+                    fila.Add(tabla.Rows[indiceFila][columna.ColumnName].ToString());
+                }
+
+                indice++;
+            }
+            return fila;
+        }
+
+        // Función para obtener el contenido de una columna del DataTable como lista de strings
+        private List<string> ObtenerColumnaComoLista(DataTable tabla, int indiceColumna, int row)
+        {
+            List<string> columna = new List<string>();
+            int indice = 0;
+
+            foreach (DataRow fila in tabla.Rows)
+            {
+                if (indice >= row)
+                {
+                    columna.Add(fila[indiceColumna].ToString());
+                }
+                indice++;
+            }
+            return columna;
+        }
+
+
+        // Función para manejar la fila actual
+        private List<string> LimpiarLista(List<string> lista, string nombreElemento)
+        {
+            limpiezaDeDatos mrCleaner = new limpiezaDeDatos();
+
+            List<string> listaVacia = new List<string>();
+
+            // Aqui vamos a poner un switch, obtendremos el nombre de la caracteristica y
+            // le pasaremos diferentes regex para corroborar si es un elemento del que dice ser
+
+
+            // Deserializa el JSON a un objeto
+            dynamic objetoDeserializado = JsonConvert.DeserializeObject(nombreElemento);
+
+            string campo = objetoDeserializado.CAMPO.ToString();
+            string alias = objetoDeserializado.ALIAS.ToString();
+
+            switch (campo)
+            {
+                case "REFERENCIA_DE_SERV_list":
+                    {
+                        //El alias lo ocuparemos cuando un campo puede contener numeros y letras
+                        //como en este caso, a veces son solo numeros y a veces son solo letras.
+                        //Entonces depende de si queremos llamar una funcion diferente
+
+                        if (alias == "EMBARQUE_DHL") 
+                        {
+                            if(mrCleaner.SonTodosElementosIguales(mrCleaner.refServDHLVerificarArray(lista)))
+                            {
+                                return listaVacia;
+                            }
+                            else
+                            {
+                                return mrCleaner.refServDHLVerificarArray(lista);
+                            }
+                        }
+
+                    }
+                    break;
+
+                case "IDORIGEN_list":
+                    {
+
+                    }
+                    break;
+
+                case "RFCREMITENTE_list":
+                    {
+
+                    }
+                    break;
+
+                case "CALLE_list":
+                    {
+
+                    }
+                    break;
+
+                case "MUNICIPIO_list":
+                    {
+
+                    }
+                    break;
+
+                case "MUNICIPIO_SAT_list":
+                    {
+
+                    }
+                    break;
+
+                case "ESTADO_list":
+                    {
+
+                    }
+                    break;
+
+                case "ESTADO_SAT_list":
+                    {
+
+                    }
+                    break;
+
+                case "PAIS_list":
+                    {
+
+                    }
+                    break;
+
+                case "CODIGOPOSTAL_list":
+                    {
+
+                    }
+                    break;
+
+                case "IDDESTINO_list":
+                    {
+
+                    }
+                    break;
+
+                case "RFCDESTINATARIO_list":
+                    {
+
+                    }
+                    break;
+
+                case "CALLE2_list":
+                    {
+
+                    }
+                    break;
+
+                case "MUNICIPIO2_list":
+                    {
+
+                    }
+                    break;
+
+                case "MUNICIPIO_SAT2_list":
+                    {
+
+                    }
+                    break;
+
+                case "ESTADO2_list":
+                    {
+
+                    }
+                    break;
+
+                case "ESTADO_SAT2_list":
+                    {
+
+                    }
+                    break;
+
+                case "PAIS2_list":
+                    {
+
+                    }
+                    break;
+
+                case "CODIGOPOSTAL2_list":
+                    {
+
+                    }
+                    break;
+
+                case "PESONETOTOTAL_list":
+                    {
+
+                    }
+                    break;
+
+                case "NUMTOTALMERCANCIAS_list":
+                    {
+
+                    }
+                    break;
+
+                case "BIENESTRANSP_list":
+                    {
+
+                    }
+                    break;
+
+                case "DESCRIPCION_list":
+                    {
+
+                    }
+                    break;
+
+                case "CLAVEUNIDAD_list":
+                    {
+
+                    }
+                    break;
+
+                case "MATERIALPELIGROSO_list":
+                    {
+
+                    }
+                    break;
+
+                case "CVEMATERIALPELIGROSO_list":
+                    {
+
+                    }
+                    break;
+
+                case "EMBALAJE_list":
+                    {
+
+                    }
+                    break;
+
+                case "DESCRIPEMBALAJE_list":
+                    {
+
+                    }
+                    break;
+
+                case "VALORMERCANCIA_list":
+                    {
+
+                    }
+                    break;
+
+                case "TOTAL_KM_RUTA_list":
+                    {
+
+                    }
+                    break;
+
+                case "FRACCIONARANCELARIA_list":
+                    {
+
+                    }
+                    break;
+
+                case "FRACCIONARANCELARIA2_list":
+                    {
+
+                    }
+                    break;
+
+                case "UUIDCOMERCIOEXT_list":
+                    {
+
+                    }
+                    break;
+
+                case "UUIDCOMERCIOEXT2_list":
+                    {
+
+                    }
+                    break;
+
+                case "SERVPROV_ID_list":
+                    {
+
+                    }
+                    break;
+
+                case "SERVPROV_NAM_list":
+                    {
+
+                    }
+                    break;
+
+            }
+
+            return listaVacia;
 
         }
 
 
+              
         public string BuscarEnHeaders(string contenidoCelda)
         {
             List<List<string>> listaSuprema = Headers.HeadList;
             Dictionary<string, object> resultDict = new Dictionary<string, object>();
 
-            for (int i = 0; i < listaSuprema.Count; i++)
+            // Utiliza un bucle foreach para iterar sobre cada lista en listaSuprema
+            foreach (var lista in listaSuprema)
             {
-                if (listaSuprema[i].Contains(contenidoCelda))
+                // Verifica si la lista contiene el contenido de la celda
+                if (lista.Contains(contenidoCelda))
                 {
-                    // Encontró la palabra, agregue el índice o el nombre de la lista a un JSON
-                    resultDict[contenidoCelda] = i; // Puedes usar i o el nombre de la lista, según lo que prefieras
+                    // Encontró la palabra, agrega el índice o el nombre de la lista al JSON
+                    resultDict["CAMPO"] = lista[0].ToString();
+                    resultDict["ALIAS"] = contenidoCelda;
+                    break; // Termina el bucle una vez que se encuentra el contenido
+
                 }
             }
 
@@ -209,277 +520,6 @@ namespace excelFiles.Helpers
             string jsonResult = JsonConvert.SerializeObject(resultDict);
 
             return jsonResult;
-        }
-
-
-        public void BuscadorHeaders(DataTable tablaTest)
-        {
-            //List<List<string>> headersList = new List<List<string>>();
-            //List<string> jsonConfList = new List<string>();
-
-            //List<string> dhlHeaders = Headers.DHL_H;
-            //List<string> genericHeaders = Headers.DHL_H;
-
-            //headersList.Add(dhlHeaders);
-            //headersList.Add(genericHeaders);
-
-            //try
-            //{
-            //    foreach (var listaCliente in headersList)
-            //    {
-            //        //Iniciamos el contador para saber donde inician los headers
-            //        int contador = 1;
-
-            //        //Aqui vamos a intentar localizar los headers haciendo un recorrido por cada row.
-            //        foreach (DataRow row in tablaTest.Rows)
-            //        {
-            //            List<string> listaPosibleHeader = new List<string>();
-            //            List<int> posicionesCoincidencias = new List<int>();
-
-            //            foreach (DataColumn column in tablaTest.Columns)
-            //            {
-            //                //  Agregar el valor de la columna a la lista
-            //                listaPosibleHeader.Add((string)row[column]);
-            //            }
-
-            //            //  Nos dice si encontro algo en la lista
-            //            if (listaCliente.Intersect(listaPosibleHeader).Any())
-            //            {
-            //                /*
-            //                Aqui vamos a evaluar las listas
-            //                Iterar sobre los elementos de la lista molde
-            //                */
-            //                foreach (var elemento in listaCliente)
-            //                {
-            //                    //  Buscar la posición del elemento en la lista a evaluar
-            //                    int posicionEnListaAEvaluar = listaPosibleHeader.IndexOf(elemento);
-
-            //                    //  Agregar la posición donde se encontró la coincidencia
-            //                    posicionesCoincidencias.Add(posicionEnListaAEvaluar);
-            //                }
-
-            //                //  Aqui deberiamos evaluar que cosas guardar o num de coincidencias
-
-
-            //                //  Aqui guardaremos el resultado de las listas
-            //                var objetoJSON = new
-            //                {
-            //                    matches = posicionesCoincidencias.Count(num => num != -1),
-            //                    listaHeaders = listaCliente,
-            //                    posiciones = posicionesCoincidencias,
-            //                    inicioHead = contador
-            //                };
-
-            //                // Convertir el objeto JSON a formato string y agregarlo a la lista
-            //                string json = JsonConvert.SerializeObject(objetoJSON);
-            //                jsonConfList.Add(json);
-            //            }
-            //            //  Aqui evaluaremos que hacer con los elementos de las listas
-
-            //        }
-            //        //  Contador de header
-            //        contador++;
-            //    }
-            //    //Aqui nos decidimos por un objeto de la lista
-            //    var jsonConfObj = ObtenerDatosJson(jsonConfList);
-            //    //Aqui intentaremos abrir el Json y darle valores generales a las variables que nos importan
-            //    GeneralizarHeadersJson(jsonConfObj);
-
-
-            //    Console.WriteLine(jsonConfList.ToString());
-            //}
-            //catch (Exception ex)
-            //{
-            //    escribirEnLog.Add(string.Format("{0} - Error Al leer archivo {1} ", DateTime.Now, ex.ToString()));
-            //    throw;
-            //}
-        }
-
-
-        public void GeneralizarHeadersJson(string JsonConfObjStr)
-        {
-            try
-            {
-                // Deserializar el objeto JSON al objeto C#
-                jsonConf objetoJson = JsonConvert.DeserializeObject<jsonConf>(JsonConfObjStr);
-
-                // Acceder a la lista de números
-                List<int> listaDeNumeros = objetoJson.posiciones;
-                List<string> listaDeHeaders = objetoJson.listaHeaders;
-
-                // Ahora puedes usar la lista de números como desees
-                mercanciaGenerica objetoJsonFinal = new mercanciaGenerica();
-
-                // Iteramos sobre la lista de strings
-                foreach (var (str, num) in listaDeHeaders.Zip(listaDeNumeros, (s, n) => (s, n)))
-                {
-
-                    // Comparamos cada string con diferentes condiciones
-                    if (string.Equals(str, "EMBARQUE_DHL", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "Referencia del servicio", StringComparison.OrdinalIgnoreCase))
-                    {
-                        // Asignamos el valor al campo correspondiente del objeto JSON
-                        objetoJsonFinal.ReferenciaDelServicio = num;
-                    }
-                    else if (string.Equals(str, "RFC del remitente", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "RFCREMITENTE", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.RFCdelRemitente = num;
-                    }
-                    else if (string.Equals(str, "Razón Social del Remitente", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "RSdelRemitente", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.RSdelRemitente = num;
-                    }
-                    else if (string.Equals(str, "CALLE", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Calle = num;
-                    }
-                    else if (str == "Municipio" ||
-                        string.Equals(str, "MUNICIPIO_SAT", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Municipio = num;
-                    }
-                    else if (string.Equals(str, "ESTADO_SAT", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Estado = num;
-                    }
-                    else if (str == "País" ||
-                        string.Equals(str, "PAIS", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Pais = num;
-                    }
-                    else if (str == "C.P." ||
-                        string.Equals(str, "CODIGOPOSTAL", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.CP = num;
-                    }
-                    else if (string.Equals(str, "RFC Destinatario", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "RFCREMITENTE", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.RFCDestinatario = num;
-                    }
-                    else if (string.Equals(str, "Razón Social del Destinatario", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "RSdelDestinatario", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.RSdelDestinatario = num;
-                    }
-                    else if (string.Equals(str, "CALLE2", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Calle2 = num;
-                    }
-                    else if (str == "Municipio2" ||
-                        string.Equals(str, "MUNICIPIO_SAT2", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Municipio2 = num;
-                    }
-                    else if (string.Equals(str, "ESTADO_SAT2", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Estado2 = num;
-                    }
-                    else if (str == "País2" ||
-                        string.Equals(str, "PAIS2", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.Pais2 = num;
-                    }
-                    else if (str == "C.P.2" ||
-                        string.Equals(str, "CODIGOPOSTAL2", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.CP2 = num;
-                    }
-                    else if (string.Equals(str, "Peso Neto", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "PESONETOTOTAL", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.PesoNeto = num;
-                    }
-                    else if (string.Equals(str, "Número Total de Mercancías", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "NUMTOTALMERCANCIAS", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.NumeroTotalMercancias = num;
-                    }
-                    else if (string.Equals(str, "Clave del Bien Transportado", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "BIENESTRANSP", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.ClaveDelBienTransportado = num;
-                    }
-                    else if (string.Equals(str, "Descripción del Bien Transportado", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "DESCRIPCION", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.DescripcionDelBienTransportado = num;
-                    }
-                    else if (string.Equals(str, "Clave Unidad de medida", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "CLAVEUNIDAD", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.ClaveUnidadDeMedida = num;
-                    }
-                    else if (string.Equals(str, "MATERIALPELIGROSO", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "Material Peligroso (Sí o No)", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.MaterialPeligroso = num;
-                    }
-                    else if (string.Equals(str, "VALORMERCANCIA", StringComparison.OrdinalIgnoreCase) ||
-                        string.Equals(str, "Valor de la Mercancía ", StringComparison.OrdinalIgnoreCase))
-                    {
-                        objetoJsonFinal.ValorDeLaMercancia = num;
-                    }
-                }
-
-                // Convertimos el objeto JSON a formato JSON
-                string json = JsonConvert.SerializeObject(objetoJson, Formatting.Indented);
-
-                // Mostramos el objeto JSON resultante
-                Console.WriteLine(json);
-            }
-            catch (Exception ex)
-            {
-                escribirEnLog.Add(string.Format("{0} - Error Al leer archivo {1} ", DateTime.Now, ex.ToString()));
-                throw;
-            }
-        }
-
-
-        public string ObtenerDatosJson(List<string> JsonObjStr)
-        {
-            try
-            {
-                // Inicializamos variables para almacenar el objeto JSON con el valor de matches más grande
-                int maxMatches = int.MinValue;
-                dynamic objetoJsonMaxMatches = null;
-
-                // Iteramos sobre la lista de strings
-                foreach (string jsonString in JsonObjStr)
-                {
-                    // Deserializamos el objeto JSON
-                    dynamic objetoJson = JsonConvert.DeserializeObject(jsonString);
-
-                    // Obtenemos el valor de matches
-                    int matches = objetoJson.matches;
-
-                    // Comparamos con el valor máximo encontrado hasta ahora
-                    if (matches > maxMatches)
-                    {
-                        maxMatches = matches;
-                        objetoJsonMaxMatches = objetoJson;
-                    }
-                }
-
-                // Convertir el objeto JSON seleccionado a formato JSON
-                string jsonSeleccionado = JsonConvert.SerializeObject(objetoJsonMaxMatches, Formatting.Indented);
-                return jsonSeleccionado;
-            }
-            catch (Exception ex)
-            {
-                escribirEnLog.Add(string.Format("{0} - Error Al leer archivo {1} ", DateTime.Now, ex.ToString()));
-                throw;
-            }
-
-            return "";
-        }
-
-
-        public void BuscarInicioTabla(DataTable tablaSucia)
-        {
-
         }
 
 

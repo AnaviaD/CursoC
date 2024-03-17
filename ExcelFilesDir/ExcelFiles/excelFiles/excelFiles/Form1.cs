@@ -30,7 +30,7 @@ namespace excelFiles
             {
                 DataTable dirtyTable = new DataTable();
                 dirtyTable = lector.ProcesoExcelM(archivo);
-                lector.BuscadorHeaders(dirtyTable);
+                lector.BuscarEnTabla(dirtyTable);
             }
         }
     }
