@@ -266,21 +266,8 @@ namespace excelFiles.Helpers
 
                         if (alias == "EMBARQUE_DHL") 
                         {
-                            if(mrCleaner.SonTodosElementosIguales(mrCleaner.refServDHLVerificarArray(lista)))
-                            {
-                                return listaVacia;
-                            }
-                            else
-                            {
-                                return mrCleaner.refServDHLVerificarArray(lista);
-                            }
+                            return mrCleaner.refServDHLVerificarArray(lista);
                         }
-
-                    }
-                    break;
-
-                case "IDORIGEN_list":
-                    {
 
                     }
                     break;

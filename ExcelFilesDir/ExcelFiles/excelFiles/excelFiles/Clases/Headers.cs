@@ -47,18 +47,18 @@
             headersList.Add(IDORIGEN_list);
             headersList.Add(RFCREMITENTE_list);
             headersList.Add(CALLE_list);
-            headersList.Add(MUNICIPIO_list);
+            //headersList.Add(MUNICIPIO_list);
             headersList.Add(MUNICIPIO_SAT_list);
-            headersList.Add(ESTADO_list);
+            //headersList.Add(ESTADO_list);
             headersList.Add(ESTADO_SAT_list);
             headersList.Add(PAIS_list);
             headersList.Add(CODIGOPOSTAL_list);
-            headersList.Add(IDDESTINO_list);
+            //headersList.Add(IDDESTINO_list);
             headersList.Add(RFCDESTINATARIO_list);
             headersList.Add(CALLE2_list);
-            headersList.Add(MUNICIPIO2_list);
+            //headersList.Add(MUNICIPIO2_list);
             headersList.Add(MUNICIPIO_SAT2_list);
-            headersList.Add(ESTADO2_list);
+            //headersList.Add(ESTADO2_list);
             headersList.Add(ESTADO_SAT2_list);
             headersList.Add(PAIS2_list);
             headersList.Add(CODIGOPOSTAL2_list);
@@ -69,16 +69,16 @@
             headersList.Add(CLAVEUNIDAD_list);
             headersList.Add(MATERIALPELIGROSO_list);
             headersList.Add(CVEMATERIALPELIGROSO_list);
-            headersList.Add(EMBALAJE_list);
-            headersList.Add(DESCRIPEMBALAJE_list);
-            headersList.Add(VALORMERCANCIA_list);
-            headersList.Add(TOTAL_KM_RUTA_list);
+            //headersList.Add(EMBALAJE_list);
+            //headersList.Add(DESCRIPEMBALAJE_list);
+            //headersList.Add(VALORMERCANCIA_list);
+            //headersList.Add(TOTAL_KM_RUTA_list);
             headersList.Add(FRACCIONARANCELARIA_list);
             headersList.Add(FRACCIONARANCELARIA2_list);
-            headersList.Add(UUIDCOMERCIOEXT_list);
-            headersList.Add(UUIDCOMERCIOEXT2_list);
-            headersList.Add(SERVPROV_ID_list);
-            headersList.Add(SERVPROV_NAM_list);
+            //headersList.Add(UUIDCOMERCIOEXT_list);
+            //headersList.Add(UUIDCOMERCIOEXT2_list);
+            //headersList.Add(SERVPROV_ID_list);
+            //headersList.Add(SERVPROV_NAM_list);
 
         }
 

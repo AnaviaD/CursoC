@@ -49,5 +49,86 @@ namespace excelFiles.Clases
         }
 
 
+        public List<string> rFCDHLVerificarArray(List<string> cadenas)
+        {
+            List<string> resultados = new List<string>();
+
+            Regex regex = new Regex("^[A-Z]{3,4}[0-9]{6}[A-Z0-9]{3}$");
+
+            foreach (string cadena in cadenas)
+            {
+                if (regex.IsMatch(cadena))
+                {
+                    resultados.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    resultados.Add("0VALORFALTANTE0");
+                }
+            }
+
+            return resultados;
+        }
+
+
+        public List<string> calleDHLVerificarArray(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^(?=.*\d)(?=.*[a-zA-Z])(?=(?:.*\s.*){2,}).{10,}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
+
+        public List<string> municipioDHLVerificarArray(List<string> cadenas)
+        {
+            //  Tambien nos sirve para pais y estado pero van a ser irrelevantes si se obtiene cp
+            //  Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^\d{1,3}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
     }
 }
