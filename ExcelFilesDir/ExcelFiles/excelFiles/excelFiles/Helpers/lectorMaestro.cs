@@ -274,207 +274,105 @@ namespace excelFiles.Helpers
 
                 case "RFCREMITENTE_list":
                     {
-
+                        return mrCleaner.rFCDHLVerificarArray(lista);
                     }
                     break;
 
                 case "CALLE_list":
                     {
-
-                    }
-                    break;
-
-                case "MUNICIPIO_list":
-                    {
-
+                        return mrCleaner.calleDHLVerificarArray(lista);
                     }
                     break;
 
                 case "MUNICIPIO_SAT_list":
                     {
-
+                        return mrCleaner.municipioDHLVerificarArray(lista);
                     }
                     break;
 
                 case "ESTADO_list":
                     {
-
-                    }
-                    break;
-
-                case "ESTADO_SAT_list":
-                    {
-
+                        return mrCleaner.estadoDHLVerificarArray(lista);
                     }
                     break;
 
                 case "PAIS_list":
                     {
-
+                        return mrCleaner.estadoDHLVerificarArray(lista);
                     }
                     break;
 
                 case "CODIGOPOSTAL_list":
                     {
-
-                    }
-                    break;
-
-                case "IDDESTINO_list":
-                    {
-
+                        return mrCleaner.cpDHLVerificarArray(lista);
                     }
                     break;
 
                 case "RFCDESTINATARIO_list":
                     {
-
+                        return mrCleaner.rFCDHLVerificarArray(lista);
                     }
                     break;
 
                 case "CALLE2_list":
                     {
-
-                    }
-                    break;
-
-                case "MUNICIPIO2_list":
-                    {
-
+                        return mrCleaner.calleDHLVerificarArray(lista);
                     }
                     break;
 
                 case "MUNICIPIO_SAT2_list":
                     {
-
-                    }
-                    break;
-
-                case "ESTADO2_list":
-                    {
-
+                        return mrCleaner.municipioDHLVerificarArray(lista);
                     }
                     break;
 
                 case "ESTADO_SAT2_list":
                     {
-
+                        return mrCleaner.estadoDHLVerificarArray(lista);
                     }
                     break;
 
                 case "PAIS2_list":
                     {
-
+                        return mrCleaner.estadoDHLVerificarArray(lista);
                     }
                     break;
 
                 case "CODIGOPOSTAL2_list":
                     {
-
+                        return mrCleaner.cpDHLVerificarArray(lista);
                     }
                     break;
 
                 case "PESONETOTOTAL_list":
                     {
-
+                        return mrCleaner.SoloNumeros(lista);
                     }
                     break;
 
                 case "NUMTOTALMERCANCIAS_list":
                     {
-
+                        return mrCleaner.SoloNumeros(lista);
                     }
                     break;
 
                 case "BIENESTRANSP_list":
                     {
-
+                        return mrCleaner.codigoMercanciaDHLVerificarArray(lista);
                     }
                     break;
 
                 case "DESCRIPCION_list":
                     {
-
+                        return mrCleaner.descripcionMercDHLVerificarArray(lista);
                     }
                     break;
 
                 case "CLAVEUNIDAD_list":
                     {
-
+                        return mrCleaner.claveUnidadDHLVerificarArray(lista);
                     }
-                    break;
-
-                case "MATERIALPELIGROSO_list":
-                    {
-
-                    }
-                    break;
-
-                case "CVEMATERIALPELIGROSO_list":
-                    {
-
-                    }
-                    break;
-
-                case "EMBALAJE_list":
-                    {
-
-                    }
-                    break;
-
-                case "DESCRIPEMBALAJE_list":
-                    {
-
-                    }
-                    break;
-
-                case "VALORMERCANCIA_list":
-                    {
-
-                    }
-                    break;
-
-                case "TOTAL_KM_RUTA_list":
-                    {
-
-                    }
-                    break;
-
-                case "FRACCIONARANCELARIA_list":
-                    {
-
-                    }
-                    break;
-
-                case "FRACCIONARANCELARIA2_list":
-                    {
-
-                    }
-                    break;
-
-                case "UUIDCOMERCIOEXT_list":
-                    {
-
-                    }
-                    break;
-
-                case "UUIDCOMERCIOEXT2_list":
-                    {
-
-                    }
-                    break;
-
-                case "SERVPROV_ID_list":
-                    {
-
-                    }
-                    break;
-
-                case "SERVPROV_NAM_list":
-                    {
-
-                    }
-                    break;
+                    break;   
 
             }
 
