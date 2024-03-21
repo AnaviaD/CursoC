@@ -130,5 +130,172 @@ namespace excelFiles.Clases
             return cadenasFiltradas;
         }
 
+        public List<string> estadoDHLVerificarArray(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^[A-Z]{1,3}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
+        public List<string> cpDHLVerificarArray(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^\d{1,5}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
+
+        public List<string> codigoMercanciaDHLVerificarArray(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^\d{1,8}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
+
+        public List<string> descripcionMercDHLVerificarArray(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^\S.{8,}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
+
+        public List<string> SoloNumeros(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^\d+(\.\d+)?$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
+
+        public List<string> claveUnidadDHLVerificarArray(List<string> cadenas)
+        {
+            // Lista para almacenar las cadenas que pasan el regex
+            List<string> cadenasFiltradas = new List<string>();
+
+            // Regex para validar las cadenas
+            Regex regex = new Regex(@"^[A-Z]\d{2}$");
+
+            // Iterar sobre cada cadena en la lista
+            foreach (string cadena in cadenas)
+            {
+                // Verificar si la cadena cumple con el regex
+                if (regex.IsMatch(cadena))
+                {
+                    // Agregar la cadena a la lista de cadenas filtradas
+                    cadenasFiltradas.Add(cadena);
+                }
+                else
+                {
+                    // Si no cumple, agrega "0VALORFALTANTE0"
+                    cadenasFiltradas.Add("0VALORFALTANTE0");
+                }
+            }
+
+            // Devolver la lista de cadenas que pasaron el regex
+            return cadenasFiltradas;
+        }
+
     }
 }

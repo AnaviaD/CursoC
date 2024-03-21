@@ -264,7 +264,11 @@ namespace excelFiles.Helpers
                         //como en este caso, a veces son solo numeros y a veces son solo letras.
                         //Entonces depende de si queremos llamar una funcion diferente
 
-                        if (alias == "EMBARQUE_DHL") 
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.refServDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
                         {
                             return mrCleaner.refServDHLVerificarArray(lista);
                         }
@@ -274,105 +278,224 @@ namespace excelFiles.Helpers
 
                 case "RFCREMITENTE_list":
                     {
-                        return mrCleaner.rFCDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.rFCDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.rFCDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "CALLE_list":
                     {
-                        return mrCleaner.calleDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.calleDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.calleDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "MUNICIPIO_SAT_list":
                     {
-                        return mrCleaner.municipioDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.municipioDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.municipioDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "ESTADO_list":
                     {
-                        return mrCleaner.estadoDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.estadoDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.estadoDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "PAIS_list":
                     {
-                        return mrCleaner.estadoDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.estadoDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.estadoDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "CODIGOPOSTAL_list":
                     {
-                        return mrCleaner.cpDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.cpDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.cpDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "RFCDESTINATARIO_list":
                     {
-                        return mrCleaner.rFCDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.rFCDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.rFCDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "CALLE2_list":
                     {
-                        return mrCleaner.calleDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.calleDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.calleDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "MUNICIPIO_SAT2_list":
                     {
-                        return mrCleaner.municipioDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.municipioDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.municipioDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "ESTADO_SAT2_list":
                     {
-                        return mrCleaner.estadoDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.estadoDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.estadoDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "PAIS2_list":
                     {
-                        return mrCleaner.estadoDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.estadoDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.estadoDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "CODIGOPOSTAL2_list":
                     {
-                        return mrCleaner.cpDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.cpDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.cpDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "PESONETOTOTAL_list":
                     {
-                        return mrCleaner.SoloNumeros(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.SoloNumeros(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.SoloNumeros(lista);
+                        }
                     }
                     break;
 
                 case "NUMTOTALMERCANCIAS_list":
                     {
-                        return mrCleaner.SoloNumeros(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.SoloNumeros(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.SoloNumeros(lista);
+                        }
                     }
                     break;
 
                 case "BIENESTRANSP_list":
                     {
-                        return mrCleaner.codigoMercanciaDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.codigoMercanciaDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.codigoMercanciaDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "DESCRIPCION_list":
                     {
-                        return mrCleaner.descripcionMercDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.descripcionMercDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.descripcionMercDHLVerificarArray(lista);
+                        }
                     }
                     break;
 
                 case "CLAVEUNIDAD_list":
                     {
-                        return mrCleaner.claveUnidadDHLVerificarArray(lista);
+                        if (mrCleaner.SonTodosElementosIguales(mrCleaner.claveUnidadDHLVerificarArray(lista)))
+                        {
+                            return listaVacia;
+                        }
+                        else
+                        {
+                            return mrCleaner.claveUnidadDHLVerificarArray(lista);
+                        }
                     }
-                    break;   
+                    break;
 
             }
 
