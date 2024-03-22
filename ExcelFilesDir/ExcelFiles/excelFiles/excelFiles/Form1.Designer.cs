@@ -30,6 +30,7 @@
         {
             lbltexto = new Label();
             textBox1 = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lbltexto
@@ -52,11 +53,22 @@
             textBox1.DragDrop += textBox1_DragDrop;
             textBox1.DragEnter += textBox1_DragEnter;
             // 
+            // button1
+            // 
+            button1.Location = new Point(337, 415);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 2;
+            button1.Text = "Crear DATA";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(lbltexto);
             Name = "Form1";
@@ -69,5 +81,6 @@
 
         private Label lbltexto;
         private TextBox textBox1;
+        private Button button1;
     }
 }

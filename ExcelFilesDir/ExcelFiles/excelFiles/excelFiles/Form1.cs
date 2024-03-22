@@ -1,10 +1,14 @@
 using excelFiles.Helpers;
+using excelFiles.MLModels;
 using System.Data;
 
 namespace excelFiles
 {
     public partial class Form1 : Form
     {
+        lectorMaestro   lector      = new lectorMaestro();
+        getValues       recolector  = new getValues();
+
         public Form1()
         {
             InitializeComponent();
@@ -18,7 +22,6 @@ namespace excelFiles
 
         private void textBox1_DragDrop(object sender, DragEventArgs e)
         {
-            lectorMaestro lector = new lectorMaestro();
 
             string[] archivos = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
@@ -32,6 +35,11 @@ namespace excelFiles
                 dirtyTable = lector.ProcesoExcelM(archivo);
                 lector.BuscarEnTabla(dirtyTable);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            recolector.ObtenerColumnas( recolector.ObtenerTabla());
         }
     }
 }
