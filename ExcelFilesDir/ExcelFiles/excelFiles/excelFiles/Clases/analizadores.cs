@@ -107,5 +107,20 @@ namespace excelFiles.Clases
             return contador;
         }
 
+        public int ContarPuntos(string texto)
+        {
+            int contador = 0;
+
+            foreach (char caracter in texto)
+            {
+                if (caracter == '.')
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
+        }
+
     }
 }

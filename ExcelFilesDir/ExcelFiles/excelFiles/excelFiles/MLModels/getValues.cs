@@ -34,25 +34,24 @@ namespace excelFiles.MLModels
 
         private void CargarConexion(string _xServerName, string _xNombreBD, string _xUser, string _xPassword)
         {
-            this._xConnString.ConnectionString = string.Format("data source = {0}; initial catalog = {1}; User Id={2}; Password = {3};", new object[] { _xServerName, _xNombreBD, _xUser, _xPassword });
+            this._xConnString.ConnectionString = string.Format("data source = {0}; initial catalog = {1}; User Id={2}; Password = {3}; TrustServerCertificate=true;", new object[] { _xServerName, _xNombreBD, _xUser, _xPassword });
         }
         private void CargarConexion2(string _xServerName, string _xNombreBD, string _xUser, string _xPassword)
         {
-            this._xConnString2.ConnectionString = string.Format("data source = {0}; initial catalog = {1}; User Id={2}; Password = {3};", new object[] { _xServerName, _xNombreBD, _xUser, _xPassword });
+            this._xConnString2.ConnectionString = string.Format("data source = {0}; initial catalog = {1}; User Id={2}; Password = {3}; TrustServerCertificate=true;", new object[] { _xServerName, _xNombreBD, _xUser, _xPassword });
         }
 
         public DataTable ObtenerTabla()
         {
-            DataTable dat = new DataTable();
+            DataTable dt = new DataTable();
             try
             {
-                DataTable dt = new DataTable();
                 string sentencia = string.Format("SELECT TOP (1000) * FROM x_FTR.dbo.TB_MERCANCIAS_CLIENTE");
                 this._xConnString.Open();
 
                 SqlDataAdapter dataAda = new SqlDataAdapter(sentencia, this._xConnString);
                 dataAda.Fill(dt);
-
+                return dt;
                 
             }
             catch (Exception e)
@@ -65,7 +64,7 @@ namespace excelFiles.MLModels
                 this._xConnString.Close();
             }
 
-            return dat;
+            return dt;
         }
 
         public void ObtenerColumnas(DataTable dt)
@@ -85,14 +84,11 @@ namespace excelFiles.MLModels
                 CP_list.Add(row["CP"].ToString());
             }
 
-
             //Aqui mandamos a evaluar todas las listas 
-
         }
 
         public void guardarCSV(List<MLData> registros)
         {
-            
             // Ruta donde se guardará el archivo CSV
             string filePath = "data.csv";
 
