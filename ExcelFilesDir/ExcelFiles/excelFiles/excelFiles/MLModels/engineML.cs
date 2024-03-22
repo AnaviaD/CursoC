@@ -22,7 +22,7 @@ namespace excelFiles.MLModels
             string featuresColumnName = "Features";
 
             var dataPreparationPipeline = mlContext.Transforms.Conversion.MapValueToKey("label")
-                .Append(mlContext.Transforms.Concatenate(featuresColumnName, "textTotalLength", "textKind", "textNumbers", "textCharsMin", "textCharsMay", "textWhiteSpaces"))
+                .Append(mlContext.Transforms.Concatenate(featuresColumnName, "textTotalLength", "textKind", "textNumbers", "textOnlyChar", "textCharsMin", "textCharsMay", "textWhiteSpaces", "textDotSpaces"))
                 .AppendCacheCheckpoint(mlContext);
 
             var naiveBayesMultiClassTrainer = dataPreparationPipeline.Append(mlContext.MulticlassClassification.Trainers.NaiveBayes(labelColumnName: "label", featureColumnName: featuresColumnName))
@@ -57,10 +57,12 @@ namespace excelFiles.MLModels
             {
                 textCharsMay    =0,
                 textCharsMin    =0,
+                textOnlyChar    =0,
                 textKind        =0,
                 textNumbers     =0,
                 textTotalLength =0,
-                textWhiteSpaces =0                
+                textWhiteSpaces =0,
+                textDotSpaces   =0
             };
 
             var predictor = mlContext.Model.CreatePredictionEngine<textInputDataModel, textOutputDataModel>(model);

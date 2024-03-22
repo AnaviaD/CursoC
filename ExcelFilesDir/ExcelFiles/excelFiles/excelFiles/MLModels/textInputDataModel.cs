@@ -12,12 +12,16 @@ namespace excelFiles.MLModels
         [LoadColumn(2)]
         public int textNumbers;
         [LoadColumn(3)]
-        public int textCharsMin;
+        public int textOnlyChar;
         [LoadColumn(4)]
-        public int textCharsMay;
+        public int textCharsMin;
         [LoadColumn(5)]
-        public int textWhiteSpaces;
+        public int textCharsMay;
         [LoadColumn(6)]
+        public int textWhiteSpaces;
+        [LoadColumn(7)]
+        public int textDotSpaces;
+        [LoadColumn(8)]
         public string label;
     }
 }

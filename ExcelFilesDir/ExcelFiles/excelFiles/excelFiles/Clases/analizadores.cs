@@ -81,6 +81,19 @@ namespace excelFiles.Clases
             return contador;
         }
 
+        public int ContarLetrasMinusculas(string texto)
+        {
+            int contador = 0;
+            foreach (char caracter in texto)
+            {
+                if (char.IsLower(caracter)) // Verifica si el carácter es una letra mayúscula
+                {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+
         public int ContarLetrasMayusculas(string texto)
         {
             int contador = 0;
