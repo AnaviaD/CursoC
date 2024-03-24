@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = excelFiles
-build_property.ProjectDir = C:\Users\eanavia\Desktop\Projects\CursoC#\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\
+build_property.ProjectDir = C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\ExcelFilesDir\ExcelFiles\excelFiles\excelFiles\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
