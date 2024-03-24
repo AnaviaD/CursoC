@@ -6,22 +6,22 @@ namespace excelFiles.MLModels
     internal class textInputDataModel
     {
         [LoadColumn(0)]
-        public int textTotalLength;
+        public float textTotalLength;
         [LoadColumn(1)]
-        public int textKind;
+        public float textKind;
         [LoadColumn(2)]
-        public int textNumbers;
+        public float textNumbers;
         [LoadColumn(3)]
-        public int textOnlyChar;
+        public float textOnlyChar;
         [LoadColumn(4)]
-        public int textCharsMin;
+        public float textCharsMin;
         [LoadColumn(5)]
-        public int textCharsMay;
+        public float textCharsMay;
         [LoadColumn(6)]
-        public int textWhiteSpaces;
+        public float textWhiteSpaces;
         [LoadColumn(7)]
-        public int textDotSpaces;
+        public float textDotSpaces;
         [LoadColumn(8)]
-        public string label;
+        public string Label;
     }
 }

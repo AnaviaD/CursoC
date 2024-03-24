@@ -21,12 +21,12 @@ namespace excelFiles.MLModels
 
             string featuresColumnName = "Features";
 
-            var dataPreparationPipeline = mlContext.Transforms.Conversion.MapValueToKey("label")
+            var dataPreparationPipeline = mlContext.Transforms.Conversion.MapValueToKey("Label")
                 .Append(mlContext.Transforms.Concatenate(featuresColumnName, "textTotalLength", "textKind", "textNumbers", "textOnlyChar", "textCharsMin", "textCharsMay", "textWhiteSpaces", "textDotSpaces"))
                 .AppendCacheCheckpoint(mlContext);
 
-            var naiveBayesMultiClassTrainer = dataPreparationPipeline.Append(mlContext.MulticlassClassification.Trainers.NaiveBayes(labelColumnName: "label", featureColumnName: featuresColumnName))
-                .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabels"));
+            var naiveBayesMultiClassTrainer = dataPreparationPipeline.Append(mlContext.MulticlassClassification.Trainers.NaiveBayes(labelColumnName: "Label", featureColumnName: featuresColumnName))
+                .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
 
             TrainTestData trainTest = mlContext.Data.TrainTestSplit(trainingDataView, testFraction: 0.2);
 
@@ -53,14 +53,16 @@ namespace excelFiles.MLModels
             Console.WriteLine("------------------------------------------------------------");
 
             //Aqui daremos nuesto string al que queremos analizar
+            //12,2,7,5,0,5,0,0,RFC
+            //Es importante recordar que el orden de las columnas lo es todo para la prediccion
             textInputDataModel datoMerch = new textInputDataModel()
             {
-                textCharsMay    =0,
+                textTotalLength =12,
+                textKind        =2,
+                textNumbers     =7,
+                textOnlyChar    =5,
                 textCharsMin    =0,
-                textOnlyChar    =0,
-                textKind        =0,
-                textNumbers     =0,
-                textTotalLength =0,
+                textCharsMay    =5,
                 textWhiteSpaces =0,
                 textDotSpaces   =0
             };

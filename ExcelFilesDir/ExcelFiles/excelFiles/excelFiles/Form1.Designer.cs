@@ -30,10 +30,11 @@
         {
             lbltexto = new Label();
             textBox1 = new TextBox();
-            button1 = new Button();
+            btnGetData = new Button();
             txtPredict = new TextBox();
             btnAction = new Button();
             lblResult = new Label();
+            btnGetModel = new Button();
             SuspendLayout();
             // 
             // lbltexto
@@ -56,15 +57,15 @@
             textBox1.DragDrop += textBox1_DragDrop;
             textBox1.DragEnter += textBox1_DragEnter;
             // 
-            // button1
+            // btnGetData
             // 
-            button1.Location = new Point(69, 387);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 37);
-            button1.TabIndex = 2;
-            button1.Text = "Crear Modelo";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnGetData.Location = new Point(69, 387);
+            btnGetData.Name = "btnGetData";
+            btnGetData.Size = new Size(115, 37);
+            btnGetData.TabIndex = 2;
+            btnGetData.Text = "Obtener Data";
+            btnGetData.UseVisualStyleBackColor = true;
+            btnGetData.Click += button1_Click;
             // 
             // txtPredict
             // 
@@ -81,6 +82,7 @@
             btnAction.TabIndex = 4;
             btnAction.Text = "Predict";
             btnAction.UseVisualStyleBackColor = true;
+            btnAction.Click += btnAction_Click;
             // 
             // lblResult
             // 
@@ -91,15 +93,26 @@
             lblResult.TabIndex = 5;
             lblResult.Text = "Result";
             // 
+            // btnGetModel
+            // 
+            btnGetModel.Location = new Point(190, 387);
+            btnGetModel.Name = "btnGetModel";
+            btnGetModel.Size = new Size(115, 37);
+            btnGetModel.TabIndex = 6;
+            btnGetModel.Text = "Crear Modelo";
+            btnGetModel.UseVisualStyleBackColor = true;
+            btnGetModel.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnGetModel);
             Controls.Add(lblResult);
             Controls.Add(btnAction);
             Controls.Add(txtPredict);
-            Controls.Add(button1);
+            Controls.Add(btnGetData);
             Controls.Add(textBox1);
             Controls.Add(lbltexto);
             Name = "Form1";
@@ -112,9 +125,10 @@
 
         private Label lbltexto;
         private TextBox textBox1;
-        private Button button1;
+        private Button btnGetData;
         private TextBox txtPredict;
         private Button btnAction;
         private Label lblResult;
+        private Button btnGetModel;
     }
 }

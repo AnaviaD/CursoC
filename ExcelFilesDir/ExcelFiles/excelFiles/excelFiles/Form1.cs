@@ -6,8 +6,10 @@ namespace excelFiles
 {
     public partial class Form1 : Form
     {
-        lectorMaestro   lector      = new lectorMaestro();
-        getValues       recolector  = new getValues();
+        lectorMaestro lector = new lectorMaestro();
+        getValues recolector = new getValues();
+        engineML MLEng = new engineML();
+        useModelEngine engineML = new useModelEngine();
 
         public Form1()
         {
@@ -39,7 +41,17 @@ namespace excelFiles
 
         private void button1_Click(object sender, EventArgs e)
         {
-            recolector.ObtenerColumnas( recolector.ObtenerTabla());
+            recolector.ObtenerColumnas(recolector.ObtenerTabla());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MLEng.startEngine();
+        }
+
+        private void btnAction_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = engineML.startPrediction(txtPredict.Text);
         }
     }
 }
