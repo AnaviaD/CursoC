@@ -104,18 +104,18 @@ namespace NZWalksAPI.Controllers
             }
 
             //Map DTO to Domain Model
-            regionDomainModel.Code = updateRequest.Code;
-            regionDomainModel.Name = updateRequest.Name;
-            regionDomainModel.RegionImageUrl = updateRequest.RegionImageUrl;
+            regionDomainModel.Code                  = updateRequest.Code;
+            regionDomainModel.Name                  = updateRequest.Name;
+            regionDomainModel.RegionImageUrl        = updateRequest.RegionImageUrl;
 
             await _context.SaveChangesAsync();
 
             var regionDto = new RegionDto
             {
-                Id=regionDomainModel.Id,
-                Name = regionDomainModel.Name,
-                Code = regionDomainModel.Code,
-                RegionImageUrl = regionDomainModel.RegionImageUrl,
+                Id                  = regionDomainModel.Id,
+                Name                = regionDomainModel.Name,
+                Code                = regionDomainModel.Code,
+                RegionImageUrl      = regionDomainModel.RegionImageUrl,
             };
 
             return Ok(regionDto);
