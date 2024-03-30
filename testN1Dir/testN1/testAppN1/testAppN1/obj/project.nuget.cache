@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5ZQyGVTEEHJJelUp1+CYp0YWi996X3vDfGHsa1+ELNFvwHR1mw2jymx9B2XjMyDRNpWeUDGD832E61JRuqBD+Q==",
+  "dgSpecHash": "gdXm/st9ttSXHhmm+wk/v+UnW9NJs+ZmYDLGlpE0USKdSroYTUTQZCHm0eWBLXgtgBRphShtUhppBKH6/67EAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\anavi\\Desktop\\Projects\\CursoCSharp\\CursoC\\testN1Dir\\testN1\\testAppN1\\testAppN1\\testAppN1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\anavi\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\anavi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\anavi\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\anavi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
