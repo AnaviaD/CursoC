@@ -7,10 +7,10 @@ namespace testAppN1.Controllers
     public class RegionsController : Controller
     {
 
-        public RegionsController(NZ)
-        {
+        //public RegionsController(NZ)
+        //{
             
-        }
+        //}
 
         [HttpGet]
         public async Task<IActionResult> GetAllAsync()

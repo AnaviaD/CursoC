@@ -148,3 +148,4 @@ C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\testN1Dir\testN1\testAppN1\te
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\testN1Dir\testN1\testAppN1\testAppN1\obj\Debug\net8.0\testAppN1.pdb
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\testN1Dir\testN1\testAppN1\testAppN1\obj\Debug\net8.0\testAppN1.genruntimeconfig.cache
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\testN1Dir\testN1\testAppN1\testAppN1\obj\Debug\net8.0\ref\testAppN1.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\testN1Dir\testN1\testAppN1\testAppN1\bin\Debug\net8.0\AutoMapper.dll
