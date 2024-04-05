@@ -1,15 +1,17 @@
 using excelFiles.Helpers;
 using excelFiles.MLModels;
+using Microsoft.IdentityModel.Tokens;
 using System.Data;
 
 namespace excelFiles
 {
     public partial class Form1 : Form
     {
-        lectorMaestro lector = new lectorMaestro();
-        getValues recolector = new getValues();
-        engineML MLEng = new engineML();
-        useModelEngine engineML = new useModelEngine();
+        lectorMaestro           lector                  = new lectorMaestro();
+        makingDataTable         makingDataTable         = new makingDataTable();
+        getValues               recolector              = new getValues();
+        engineML                MLEng                   = new engineML();
+        useModelEngine          engineML                = new useModelEngine();
 
         public Form1()
         {
@@ -33,9 +35,18 @@ namespace excelFiles
             // Iterar sobre los archivos .xlsx y pasar la dirección a la función lector
             foreach (string archivo in archivosXLSX)
             {
+                List<string> objetosJson = new List<string>();
                 DataTable dirtyTable = new DataTable();
+
                 dirtyTable = lector.ProcesoExcelM(archivo);
-                lector.BuscarEnTabla(dirtyTable);
+
+                objetosJson = lector.BuscarEnTabla(dirtyTable);
+
+                if (objetosJson.IsNullOrEmpty()){}
+                else
+                {
+                    makingDataTable.formList(objetosJson);
+                }
             }
         }
 

@@ -35,6 +35,8 @@
             btnAction = new Button();
             lblResult = new Label();
             btnGetModel = new Button();
+            dtOutput = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dtOutput).BeginInit();
             SuspendLayout();
             // 
             // lbltexto
@@ -52,14 +54,14 @@
             textBox1.Location = new Point(69, 38);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(653, 321);
+            textBox1.Size = new Size(657, 163);
             textBox1.TabIndex = 1;
             textBox1.DragDrop += textBox1_DragDrop;
             textBox1.DragEnter += textBox1_DragEnter;
             // 
             // btnGetData
             // 
-            btnGetData.Location = new Point(69, 387);
+            btnGetData.Location = new Point(74, 603);
             btnGetData.Name = "btnGetData";
             btnGetData.Size = new Size(115, 37);
             btnGetData.TabIndex = 2;
@@ -69,14 +71,14 @@
             // 
             // txtPredict
             // 
-            txtPredict.Location = new Point(485, 395);
+            txtPredict.Location = new Point(411, 611);
             txtPredict.Name = "txtPredict";
             txtPredict.Size = new Size(198, 23);
             txtPredict.TabIndex = 3;
             // 
             // btnAction
             // 
-            btnAction.Location = new Point(689, 395);
+            btnAction.Location = new Point(615, 611);
             btnAction.Name = "btnAction";
             btnAction.Size = new Size(75, 23);
             btnAction.TabIndex = 4;
@@ -87,7 +89,7 @@
             // lblResult
             // 
             lblResult.AutoSize = true;
-            lblResult.Location = new Point(493, 424);
+            lblResult.Location = new Point(419, 640);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(39, 15);
             lblResult.TabIndex = 5;
@@ -95,7 +97,7 @@
             // 
             // btnGetModel
             // 
-            btnGetModel.Location = new Point(190, 387);
+            btnGetModel.Location = new Point(195, 603);
             btnGetModel.Name = "btnGetModel";
             btnGetModel.Size = new Size(115, 37);
             btnGetModel.TabIndex = 6;
@@ -103,11 +105,21 @@
             btnGetModel.UseVisualStyleBackColor = true;
             btnGetModel.Click += button2_Click;
             // 
+            // dtOutput
+            // 
+            dtOutput.AllowUserToOrderColumns = true;
+            dtOutput.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtOutput.Location = new Point(74, 244);
+            dtOutput.Name = "dtOutput";
+            dtOutput.Size = new Size(652, 313);
+            dtOutput.TabIndex = 7;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(804, 689);
+            Controls.Add(dtOutput);
             Controls.Add(btnGetModel);
             Controls.Add(lblResult);
             Controls.Add(btnAction);
@@ -117,6 +129,7 @@
             Controls.Add(lbltexto);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dtOutput).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,5 +143,6 @@
         private Button btnAction;
         private Label lblResult;
         private Button btnGetModel;
+        private DataGridView dtOutput;
     }
 }

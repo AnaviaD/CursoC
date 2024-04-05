@@ -160,7 +160,7 @@ namespace excelFiles.Helpers
         }
 
 
-        public void BuscarEnTabla(DataTable tablaTest)
+        public List<string> BuscarEnTabla(DataTable tablaTest)
         {
             // Lista para almacenar objetos JSON con la posición de la celda
             List<string> objetosJson = new List<string>();
@@ -201,6 +201,8 @@ namespace excelFiles.Helpers
                     }
                 }
             }
+
+            return objetosJson;
         }
 
 
@@ -254,7 +256,6 @@ namespace excelFiles.Helpers
             dynamic objetoDeserializado = JsonConvert.DeserializeObject(nombreElemento);
 
             string campo = objetoDeserializado.CAMPO.ToString();
-            string alias = objetoDeserializado.ALIAS.ToString();
 
             switch (campo)
             {
@@ -315,7 +316,7 @@ namespace excelFiles.Helpers
                     }
                     break;
 
-                case "ESTADO_list":
+                case "ESTADO_SAT_list":
                     {
                         if (mrCleaner.SonTodosElementosIguales(mrCleaner.estadoDHLVerificarArray(lista)))
                         {

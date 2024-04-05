@@ -78,7 +78,7 @@ namespace excelFiles.Clases
             List<string> cadenasFiltradas = new List<string>();
 
             // Regex para validar las cadenas
-            Regex regex = new Regex(@"^(?=.*\d)(?=.*[a-zA-Z])(?=(?:.*\s.*){2,}).{10,}$");
+            Regex regex = new Regex(@"^(?=(?:.*\s.*){2,}).{10,}$");
 
             // Iterar sobre cada cadena en la lista
             foreach (string cadena in cadenas)

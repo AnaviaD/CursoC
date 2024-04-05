@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("excelFiles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20b09fb766aa9d157e9c41b6f33dd1ac6f3d33c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c69c67b5249546d6e2b208b5582d8f5d5e4b738")]
 [assembly: System.Reflection.AssemblyProductAttribute("excelFiles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("excelFiles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
