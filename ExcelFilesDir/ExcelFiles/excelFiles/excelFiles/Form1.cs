@@ -7,11 +7,11 @@ namespace excelFiles
 {
     public partial class Form1 : Form
     {
-        lectorMaestro           lector                  = new lectorMaestro();
-        makingDataTable         makingDataTable         = new makingDataTable();
-        getValues               recolector              = new getValues();
-        engineML                MLEng                   = new engineML();
-        useModelEngine          engineML                = new useModelEngine();
+        lectorMaestro lector = new lectorMaestro();
+        makingDataTable makingDataTable = new makingDataTable();
+        getValues recolector = new getValues();
+        engineML MLEng = new engineML();
+        useModelEngine engineML = new useModelEngine();
 
         public Form1()
         {
@@ -37,16 +37,19 @@ namespace excelFiles
             {
                 List<string> objetosJson = new List<string>();
                 DataTable dirtyTable = new DataTable();
+                DataTable cleanTable = new DataTable();
 
                 dirtyTable = lector.ProcesoExcelM(archivo);
 
                 objetosJson = lector.BuscarEnTabla(dirtyTable);
 
-                if (objetosJson.IsNullOrEmpty()){}
+                if (objetosJson.IsNullOrEmpty()) { }
                 else
                 {
-                    makingDataTable.formList(objetosJson);
+                    cleanTable = makingDataTable.formList(objetosJson);
                 }
+
+                dtOutput.DataSource = cleanTable;
             }
         }
 
@@ -63,6 +66,11 @@ namespace excelFiles
         private void btnAction_Click(object sender, EventArgs e)
         {
             lblResult.Text = engineML.startPrediction(txtPredict.Text);
+        }
+
+        private void dtOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

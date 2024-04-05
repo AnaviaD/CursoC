@@ -113,6 +113,7 @@
             dtOutput.Name = "dtOutput";
             dtOutput.Size = new Size(652, 313);
             dtOutput.TabIndex = 7;
+            dtOutput.CellContentClick += dtOutput_CellContentClick;
             // 
             // Form1
             // 
