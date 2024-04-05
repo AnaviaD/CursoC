@@ -403,16 +403,52 @@ namespace excelFiles.Helpers
             }
 
             // Mostrar el DataTable
-            foreach (DataRow row in dt.Rows)
-            {
-                foreach (var item in row.ItemArray)
-                {
-                    Console.Write(item + "\t");
-                }
-                Console.WriteLine();
-            }
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    foreach (var item in row.ItemArray)
+            //    {
+            //        Console.Write(item + "\t");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            DataTable cleanDT = new DataTable();
+
+            cleanDT = RemoveRowsWithMostOccurrences(dt, "0VALORFALTANTE0");
 
             return dt;
+        }
+
+
+        public DataTable RemoveRowsWithMostOccurrences(DataTable dataTable, string targetString)
+        {
+            int targetCount = 0;
+
+            // Contar el número de columnas en el DataTable
+            int columnCount = dataTable.Columns.Count;
+
+            // Iterar sobre las filas en orden inverso
+            for (int i = dataTable.Rows.Count - 1; i >= 0; i--)
+            {
+                DataRow row = dataTable.Rows[i];
+                int count = 0;
+                foreach (var item in row.ItemArray)
+                {
+                    if (item.ToString() == targetString)
+                    {
+                        count++;
+                    }
+                }
+                // Si el número de ocurrencias es mayor o igual a la mitad de las columnas, se marca la fila para eliminarla
+                if (count >= columnCount / 2)
+                {
+                    targetCount = count;
+                    // Eliminar la fila
+                    dataTable.Rows.RemoveAt(i);
+                }
+            }
+
+            return dataTable;
         }
 
     }
