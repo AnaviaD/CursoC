@@ -6,7 +6,7 @@ namespace testAppN2.Data
 {
     public class AuthDBContext : IdentityDbContext
     {
-        public AuthDBContext(DbContextOptions options) : base(options)
+        public AuthDBContext(DbContextOptions<AuthDBContext> options) : base(options)
         {
         }
 

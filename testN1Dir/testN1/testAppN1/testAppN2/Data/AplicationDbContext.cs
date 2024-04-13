@@ -5,7 +5,7 @@ namespace testAppN2.Data
 {
     public class AplicationDbContext : DbContext
     {
-        public AplicationDbContext(DbContextOptions options) : base(options)
+        public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options)
         {
         }
 
