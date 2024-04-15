@@ -8,9 +8,12 @@ namespace StopWatch
         System.Timers.Timer timer;
         int h, m, s, ms;
 
+
         public Form1()
         {
             InitializeComponent();
+            //Desabilitamos el btn de stop
+            stopBtn.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -18,7 +21,6 @@ namespace StopWatch
             timer = new System.Timers.Timer();
             timer.Interval = 1;
             timer.Elapsed += OnTimeEvent;
-
         }
 
         private void OnTimeEvent(object? sender, ElapsedEventArgs e)
@@ -50,11 +52,20 @@ namespace StopWatch
         private void startBtn_Click(object sender, EventArgs e)
         {
             timer.Start();
+            //Damos estado a los botones
+            startBtn.Enabled = false;
+            resetBtn.Enabled = false;
+            stopBtn.Enabled = true;
+
         }
 
         private void stopBtn_Click(object sender, EventArgs e)
         {
             timer.Stop();
+            //Damos estado a los botones
+            startBtn.Enabled = true;
+            resetBtn.Enabled = true;
+            stopBtn.Enabled = false;
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
@@ -65,6 +76,20 @@ namespace StopWatch
             s = 0;
             ms = 0;
             textScreen.Text = "00:00:00:00";
+        }
+
+        private void lb_mainAction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cb_mainAction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cb_mainAction.Items.Add(".Net");
+            //cb_mainAction.Items.Add("Angular");
+            //cb_mainAction.Items.Add("Azure");
+            //cb_mainAction.Items.Add("HackerRank");
+            //cb_mainAction.Items.Add("Search Job");
         }
     }
 }

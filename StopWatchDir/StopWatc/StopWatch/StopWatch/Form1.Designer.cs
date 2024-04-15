@@ -32,6 +32,9 @@
             startBtn = new Button();
             stopBtn = new Button();
             resetBtn = new Button();
+            cb_mainAction = new ComboBox();
+            pb_showImage = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pb_showImage).BeginInit();
             SuspendLayout();
             // 
             // textScreen
@@ -51,7 +54,7 @@
             startBtn.FlatStyle = FlatStyle.Popup;
             startBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             startBtn.ForeColor = Color.Cyan;
-            startBtn.Location = new Point(59, 187);
+            startBtn.Location = new Point(67, 398);
             startBtn.Name = "startBtn";
             startBtn.Size = new Size(160, 60);
             startBtn.TabIndex = 1;
@@ -65,7 +68,7 @@
             stopBtn.FlatStyle = FlatStyle.Popup;
             stopBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             stopBtn.ForeColor = Color.Cyan;
-            stopBtn.Location = new Point(325, 187);
+            stopBtn.Location = new Point(333, 398);
             stopBtn.Name = "stopBtn";
             stopBtn.Size = new Size(160, 60);
             stopBtn.TabIndex = 2;
@@ -79,7 +82,7 @@
             resetBtn.FlatStyle = FlatStyle.Popup;
             resetBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             resetBtn.ForeColor = Color.Cyan;
-            resetBtn.Location = new Point(568, 187);
+            resetBtn.Location = new Point(576, 398);
             resetBtn.Name = "resetBtn";
             resetBtn.Size = new Size(160, 60);
             resetBtn.TabIndex = 3;
@@ -87,12 +90,32 @@
             resetBtn.UseVisualStyleBackColor = false;
             resetBtn.Click += resetBtn_Click;
             // 
+            // cb_mainAction
+            // 
+            cb_mainAction.FormattingEnabled = true;
+            cb_mainAction.Items.AddRange(new object[] { ".Net", "Angular", "Azuer", "HackerRank", "Search Job" });
+            cb_mainAction.Location = new Point(67, 165);
+            cb_mainAction.Name = "cb_mainAction";
+            cb_mainAction.Size = new Size(630, 23);
+            cb_mainAction.TabIndex = 5;
+            cb_mainAction.SelectedIndexChanged += cb_mainAction_SelectedIndexChanged;
+            // 
+            // pb_showImage
+            // 
+            pb_showImage.Location = new Point(294, 211);
+            pb_showImage.Name = "pb_showImage";
+            pb_showImage.Size = new Size(235, 142);
+            pb_showImage.TabIndex = 6;
+            pb_showImage.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.Disable;
             BackColor = Color.FromArgb(29, 39, 48);
-            ClientSize = new Size(786, 300);
+            ClientSize = new Size(786, 500);
+            Controls.Add(pb_showImage);
+            Controls.Add(cb_mainAction);
             Controls.Add(resetBtn);
             Controls.Add(stopBtn);
             Controls.Add(startBtn);
@@ -101,6 +124,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pb_showImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -111,5 +135,7 @@
         private Button startBtn;
         private Button stopBtn;
         private Button resetBtn;
+        private ComboBox cb_mainAction;
+        private PictureBox pb_showImage;
     }
 }
