@@ -68,7 +68,7 @@
             stopBtn.FlatStyle = FlatStyle.Popup;
             stopBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             stopBtn.ForeColor = Color.Cyan;
-            stopBtn.Location = new Point(333, 398);
+            stopBtn.Location = new Point(320, 398);
             stopBtn.Name = "stopBtn";
             stopBtn.Size = new Size(160, 60);
             stopBtn.TabIndex = 2;
@@ -93,7 +93,7 @@
             // cb_mainAction
             // 
             cb_mainAction.FormattingEnabled = true;
-            cb_mainAction.Items.AddRange(new object[] { ".Net", "Angular", "Azuer", "HackerRank", "Search Job" });
+            cb_mainAction.Items.AddRange(new object[] { ".Net", "Angular", "Azure", "HackerRank", "Blender", "linkedin" });
             cb_mainAction.Location = new Point(67, 165);
             cb_mainAction.Name = "cb_mainAction";
             cb_mainAction.Size = new Size(630, 23);
@@ -102,7 +102,7 @@
             // 
             // pb_showImage
             // 
-            pb_showImage.Location = new Point(294, 211);
+            pb_showImage.Location = new Point(268, 214);
             pb_showImage.Name = "pb_showImage";
             pb_showImage.Size = new Size(235, 142);
             pb_showImage.TabIndex = 6;

@@ -15,3 +15,11 @@ C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWat
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.pdb
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.genruntimeconfig.cache
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\ref\StopWatch.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\obj\Debug\net8.0-windows\StopWatch.Properties.Resources.resources
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\azure.png
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\angular.png
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\blender.png
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\default.png
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\dotNet.png
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\hackerRank.png
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\StopWatchDir\StopWatc\StopWatch\StopWatch\bin\Debug\net8.0-windows\Resources\linkedin.png
