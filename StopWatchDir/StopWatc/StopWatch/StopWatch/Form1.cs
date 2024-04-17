@@ -15,9 +15,13 @@ namespace StopWatch
         public Form1()
         {
             InitializeComponent();
+            inicializarSonidos();
             //Desabilitamos el btn de stop
             stopBtn.Enabled = false;
+        }
 
+        private void inicializarSonidos()
+        {
             //Damos configuraciones iniciales al sonido
             s_ara1 = new SoundPlayer(Properties.Resources.aara_ara1);
 
@@ -30,7 +34,6 @@ namespace StopWatch
             s_uwu = new SoundPlayer(Properties.Resources.uwu_hannah);
 
             s_oniichan = new SoundPlayer(Properties.Resources.oniichan);
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
