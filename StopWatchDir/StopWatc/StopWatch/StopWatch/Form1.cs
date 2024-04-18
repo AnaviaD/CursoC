@@ -1,3 +1,4 @@
+using StopWatch.Models;
 using System.Diagnostics;
 using System.Media;
 using System.Timers;
@@ -142,7 +143,6 @@ namespace StopWatch
 
         private void lb_mainAction_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
         }
 
         private void cb_mainAction_SelectedIndexChanged(object sender, EventArgs e)
