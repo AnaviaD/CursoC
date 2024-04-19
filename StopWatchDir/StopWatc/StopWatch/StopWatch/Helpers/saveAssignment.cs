@@ -82,6 +82,7 @@ namespace StopWatch.Helpers
             assigmentRecordClass assigmentR = new assigmentRecordClass();
             var initHDATE = RoundDateTimeToMinute(horaInicial);
 
+            //Vamos a tener que hacerlo de otra forma
             var registro = _dbContext.AssignmentRecords
                 .FirstOrDefault(r => r.AssigmentId == assigment.id && RoundDateTimeToMinute(r.InitH) == initHDATE);
 
