@@ -1,3 +1,5 @@
+using StopWatch.Clases;
+using StopWatch.Helpers;
 using StopWatch.Models;
 using System.Diagnostics;
 using System.Media;
@@ -12,6 +14,8 @@ namespace StopWatch
         int h, m, s, ms;
         public SoundPlayer s_ara1, s_ara2, s_ara3, s_senpai, s_uwu, s_oniichan;
         private Random random = new Random();
+        saveAssignment sAsig = new saveAssignment();
+        DateTime horaInicial;
 
         public Form1()
         {
@@ -19,6 +23,7 @@ namespace StopWatch
             inicializarSonidos();
             //Desabilitamos el btn de stop
             stopBtn.Enabled = false;
+
         }
 
         private void inicializarSonidos()
@@ -73,9 +78,38 @@ namespace StopWatch
                 {
                     // Llama a la función que deseas ejecutar cada 20 minutos
                     sonidosRandom();
+                    guardarAvance();
                 }
 
             }));
+        }
+
+        private void guardarAvance()
+        {
+            assigmentRecordClass assigmentRecord = new assigmentRecordClass();
+            assigmentClass assigment = new assigmentClass();
+            DateTime currentDateTime = DateTime.Now;
+            DateTime hr1Future = currentDateTime.AddHours(1);
+
+            assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
+
+            if (assigment != null)
+            {
+                //Checamos si es que existe un registro con la misma hora inicial
+                assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
+
+                if (assigmentRecord != null)
+                {
+                    //Aqui haremos el update
+                    sAsig.updateAssigmentRecord(assigmentRecord, currentDateTime);
+                }
+                else
+                {
+                    // Guardamos si es que no existe registro posterior
+                    sAsig.guardamosAssigmentRecord(assigment, horaInicial, currentDateTime);
+                }
+
+            }
         }
 
         private void sonidosRandom()
@@ -117,6 +151,9 @@ namespace StopWatch
             stopBtn.Enabled = true;
 
             s_senpai.Play();
+
+            //Damos valores a el DateTime inicial
+            horaInicial = DateTime.Now;
         }
 
         private void stopBtn_Click(object sender, EventArgs e)
@@ -148,7 +185,7 @@ namespace StopWatch
         private void cb_mainAction_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            switch (cb_mainAction.SelectedItem.ToString().ToUpper()) 
+            switch (cb_mainAction.SelectedItem.ToString().ToUpper())
             {
                 case ".NET":
                     { pb_showImage.Image = Properties.Resources.dotNet; }
@@ -181,6 +218,34 @@ namespace StopWatch
 
             pb_showImage.SizeMode = PictureBoxSizeMode.Zoom;
 
+        }
+
+        private void btnTstInsert_Click(object sender, EventArgs e)
+        {
+            assigmentClass assigment = new assigmentClass();
+            DateTime currentDateTime = DateTime.Now;
+            DateTime hr1Future = currentDateTime.AddHours(1);
+
+            assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
+
+            if (assigment != null)
+            {
+                sAsig.guardamosAssigmentRecord(assigment, horaInicial, hr1Future);
+            }
+        }
+
+        private void btn_obtener_Click(object sender, EventArgs e)
+        {
+            assigmentRecordClass assigmentRecord = new assigmentRecordClass();
+            assigmentClass assigment = new assigmentClass();
+
+            assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
+
+            if (assigment != null)
+            {
+                //Checamos si es que existe un registro con la misma hora inicial
+                assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
+            }
         }
     }
 }

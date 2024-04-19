@@ -9,9 +9,9 @@ public partial class AssignmentRecord
 
     public string? AssigmentId { get; set; }
 
-    public DateOnly? InitH { get; set; }
+    public DateTime InitH { get; set; }
 
-    public DateOnly? FinishH { get; set; }
+    public DateTime FinishH { get; set; }
 
     public string? TotalTime { get; set; }
 
