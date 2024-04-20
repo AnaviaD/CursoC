@@ -34,8 +34,6 @@
             resetBtn = new Button();
             cb_mainAction = new ComboBox();
             pb_showImage = new PictureBox();
-            btnTstInsert = new Button();
-            btn_obtener = new Button();
             ((System.ComponentModel.ISupportInitialize)pb_showImage).BeginInit();
             SuspendLayout();
             // 
@@ -94,6 +92,7 @@
             // 
             // cb_mainAction
             // 
+            cb_mainAction.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_mainAction.FormattingEnabled = true;
             cb_mainAction.Items.AddRange(new object[] { ".Net", "Angular", "Azure", "HackerRank", "Blender", "linkedin" });
             cb_mainAction.Location = new Point(67, 165);
@@ -110,34 +109,12 @@
             pb_showImage.TabIndex = 6;
             pb_showImage.TabStop = false;
             // 
-            // btnTstInsert
-            // 
-            btnTstInsert.Location = new Point(622, 234);
-            btnTstInsert.Name = "btnTstInsert";
-            btnTstInsert.Size = new Size(75, 23);
-            btnTstInsert.TabIndex = 7;
-            btnTstInsert.Text = "test Insert";
-            btnTstInsert.UseVisualStyleBackColor = true;
-            btnTstInsert.Click += btnTstInsert_Click;
-            // 
-            // btn_obtener
-            // 
-            btn_obtener.Location = new Point(622, 287);
-            btn_obtener.Name = "btn_obtener";
-            btn_obtener.Size = new Size(75, 23);
-            btn_obtener.TabIndex = 8;
-            btn_obtener.Text = "obtenerRegistro";
-            btn_obtener.UseVisualStyleBackColor = true;
-            btn_obtener.Click += btn_obtener_Click;
-            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.Disable;
             BackColor = Color.FromArgb(29, 39, 48);
             ClientSize = new Size(786, 500);
-            Controls.Add(btn_obtener);
-            Controls.Add(btnTstInsert);
             Controls.Add(pb_showImage);
             Controls.Add(cb_mainAction);
             Controls.Add(resetBtn);
@@ -161,7 +138,5 @@
         private Button resetBtn;
         private ComboBox cb_mainAction;
         private PictureBox pb_showImage;
-        private Button btnTstInsert;
-        private Button btn_obtener;
     }
 }

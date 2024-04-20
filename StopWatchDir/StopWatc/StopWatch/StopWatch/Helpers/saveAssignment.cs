@@ -80,11 +80,13 @@ namespace StopWatch.Helpers
         public assigmentRecordClass obtenerRegistroPorFecha(assigmentClass assigment, DateTime horaInicial)
         {
             assigmentRecordClass assigmentR = new assigmentRecordClass();
-            var initHDATE = RoundDateTimeToMinute(horaInicial);
 
-            //Vamos a tener que hacerlo de otra forma
+            //Agregamos el extra de milisegundos para que quede en el rango
             var registro = _dbContext.AssignmentRecords
-                .FirstOrDefault(r => r.AssigmentId == assigment.id && RoundDateTimeToMinute(r.InitH) == initHDATE);
+                .FirstOrDefault(
+                    r => r.AssigmentId == assigment.id && 
+                    r.InitH >= horaInicial.AddSeconds(-15) && r.InitH < horaInicial.AddSeconds(15)
+                );
 
             return assigmentR;
 
@@ -92,7 +94,11 @@ namespace StopWatch.Helpers
 
         public void updateAssigmentRecord(assigmentRecordClass assigmentRecord, DateTime currentDateTime)
         {
-            throw new NotImplementedException();
+            var registroOriginal = _dbContext.AssignmentRecords.FirstOrDefault(r => r.Id == assigmentRecord.Id);
+
+            registroOriginal.FinishH = currentDateTime;
+
+            _dbContext.SaveChanges();
         }
 
         public void obtenerFechaHarcodeada()

@@ -22,6 +22,7 @@ namespace StopWatch
             InitializeComponent();
             inicializarSonidos();
             //Desabilitamos el btn de stop
+            startBtn.Enabled = false;
             stopBtn.Enabled = false;
 
         }
@@ -165,6 +166,8 @@ namespace StopWatch
             resetBtn.Enabled = true;
             stopBtn.Enabled = false;
 
+            guardarAvance();
+
             s_ara2.Play();
         }
 
@@ -216,6 +219,16 @@ namespace StopWatch
                     break;
             }
 
+            //habilitamos o desabilitamos el btn Start
+            if (cb_mainAction.SelectedItem != null)
+            {
+                startBtn.Enabled = true;
+            }
+            else
+            {
+                startBtn.Enabled = false;
+            }
+
             pb_showImage.SizeMode = PictureBoxSizeMode.Zoom;
 
         }
@@ -236,17 +249,17 @@ namespace StopWatch
 
         private void btn_obtener_Click(object sender, EventArgs e)
         {
-            sAsig.obtenerFechaHarcodeada();
-            //assigmentRecordClass assigmentRecord = new assigmentRecordClass();
-            //assigmentClass assigment = new assigmentClass();
+            //sAsig.obtenerFechaHarcodeada();
+            assigmentRecordClass    assigmentRecord     = new assigmentRecordClass();
+            assigmentClass          assigment           = new assigmentClass();
 
-            //assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
+            assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
 
-            //if (assigment != null)
-            //{
-            //    //Checamos si es que existe un registro con la misma hora inicial
-            //    assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
-            //}
+            if (assigment != null)
+            {
+                //Checamos si es que existe un registro con la misma hora inicial
+                assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
+            }
         }
     }
 }
