@@ -236,16 +236,17 @@ namespace StopWatch
 
         private void btn_obtener_Click(object sender, EventArgs e)
         {
-            assigmentRecordClass assigmentRecord = new assigmentRecordClass();
-            assigmentClass assigment = new assigmentClass();
+            sAsig.obtenerFechaHarcodeada();
+            //assigmentRecordClass assigmentRecord = new assigmentRecordClass();
+            //assigmentClass assigment = new assigmentClass();
 
-            assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
+            //assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
 
-            if (assigment != null)
-            {
-                //Checamos si es que existe un registro con la misma hora inicial
-                assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
-            }
+            //if (assigment != null)
+            //{
+            //    //Checamos si es que existe un registro con la misma hora inicial
+            //    assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
+            //}
         }
     }
 }

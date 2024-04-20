@@ -90,11 +90,20 @@ namespace StopWatch.Helpers
 
         }
 
-        internal void updateAssigmentRecord(assigmentRecordClass assigmentRecord, DateTime currentDateTime)
+        public void updateAssigmentRecord(assigmentRecordClass assigmentRecord, DateTime currentDateTime)
         {
             throw new NotImplementedException();
         }
 
+        public void obtenerFechaHarcodeada()
+        {
+            DateTime fecha = new DateTime(2024, 4, 18, 19, 47, 36);
+
+            var registro = _dbContext.AssignmentRecords
+                .FirstOrDefault(r => r.InitH >= fecha && r.InitH < fecha.AddMinutes(1));
+
+            string finalString = "" + registro.ToString();
+        }
 
 
         /*
