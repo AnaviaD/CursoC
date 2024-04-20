@@ -54,7 +54,7 @@
             startBtn.FlatStyle = FlatStyle.Popup;
             startBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             startBtn.ForeColor = Color.Cyan;
-            startBtn.Location = new Point(67, 398);
+            startBtn.Location = new Point(67, 212);
             startBtn.Name = "startBtn";
             startBtn.Size = new Size(160, 60);
             startBtn.TabIndex = 1;
@@ -68,7 +68,7 @@
             stopBtn.FlatStyle = FlatStyle.Popup;
             stopBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             stopBtn.ForeColor = Color.Cyan;
-            stopBtn.Location = new Point(320, 398);
+            stopBtn.Location = new Point(67, 294);
             stopBtn.Name = "stopBtn";
             stopBtn.Size = new Size(160, 60);
             stopBtn.TabIndex = 2;
@@ -82,7 +82,7 @@
             resetBtn.FlatStyle = FlatStyle.Popup;
             resetBtn.Font = new Font("Consolas", 12F, FontStyle.Bold);
             resetBtn.ForeColor = Color.Cyan;
-            resetBtn.Location = new Point(576, 398);
+            resetBtn.Location = new Point(67, 376);
             resetBtn.Name = "resetBtn";
             resetBtn.Size = new Size(160, 60);
             resetBtn.TabIndex = 3;
@@ -103,9 +103,9 @@
             // 
             // pb_showImage
             // 
-            pb_showImage.Location = new Point(268, 214);
+            pb_showImage.Location = new Point(283, 212);
             pb_showImage.Name = "pb_showImage";
-            pb_showImage.Size = new Size(235, 142);
+            pb_showImage.Size = new Size(414, 208);
             pb_showImage.TabIndex = 6;
             pb_showImage.TabStop = false;
             // 
