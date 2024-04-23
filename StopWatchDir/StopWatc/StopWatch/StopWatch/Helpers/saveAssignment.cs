@@ -101,6 +101,15 @@ namespace StopWatch.Helpers
             _dbContext.SaveChanges();
         }
 
+        public void updateAssigmentRecord2(assigmentRecordClass assigmentRecord, DateTime currentDateTime)
+        {
+            var registroOriginal = _dbContext.AssignmentRecords.FirstOrDefault(r => r.Id == assigmentRecord.Id);
+
+            registroOriginal.FinishH = currentDateTime;
+
+            _dbContext.SaveChanges();
+        }
+
         public void obtenerFechaHarcodeada()
         {
             DateTime fecha = new DateTime(2024, 4, 18, 19, 47, 36);
