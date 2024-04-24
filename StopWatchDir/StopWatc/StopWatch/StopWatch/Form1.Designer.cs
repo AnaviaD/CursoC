@@ -34,7 +34,6 @@
             resetBtn = new Button();
             cb_mainAction = new ComboBox();
             pb_showImage = new PictureBox();
-            btnTestFunctions = new Button();
             ((System.ComponentModel.ISupportInitialize)pb_showImage).BeginInit();
             SuspendLayout();
             // 
@@ -110,23 +109,12 @@
             pb_showImage.TabIndex = 6;
             pb_showImage.TabStop = false;
             // 
-            // btnTestFunctions
-            // 
-            btnTestFunctions.Location = new Point(314, 445);
-            btnTestFunctions.Name = "btnTestFunctions";
-            btnTestFunctions.Size = new Size(75, 23);
-            btnTestFunctions.TabIndex = 7;
-            btnTestFunctions.Text = "tstButton";
-            btnTestFunctions.UseVisualStyleBackColor = true;
-            btnTestFunctions.Click += btnTestFunctions_Click;
-            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoValidate = AutoValidate.Disable;
             BackColor = Color.FromArgb(29, 39, 48);
             ClientSize = new Size(786, 500);
-            Controls.Add(btnTestFunctions);
             Controls.Add(pb_showImage);
             Controls.Add(cb_mainAction);
             Controls.Add(resetBtn);
@@ -150,6 +138,5 @@
         private Button resetBtn;
         private ComboBox cb_mainAction;
         private PictureBox pb_showImage;
-        private Button btnTestFunctions;
     }
 }
