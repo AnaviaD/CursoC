@@ -75,7 +75,7 @@ namespace StopWatch.Helpers
             }
         }
 
-        
+
 
         public assigmentRecordClass obtenerRegistroPorFecha(assigmentClass assigment, DateTime horaInicial)
         {
@@ -84,9 +84,19 @@ namespace StopWatch.Helpers
             //Agregamos el extra de milisegundos para que quede en el rango
             var registro = _dbContext.AssignmentRecords
                 .FirstOrDefault(
-                    r => r.AssigmentId == assigment.id && 
+                    r => r.AssigmentId == assigment.id &&
                     r.InitH >= horaInicial.AddSeconds(-15) && r.InitH < horaInicial.AddSeconds(15)
                 );
+
+            if (registro != null)
+            {
+                assigmentR.Id               = registro.Id;
+                assigmentR.AssigmentId      = registro.AssigmentId;
+                assigmentR.InitH            = registro.InitH;
+                assigmentR.FinishH          = registro.FinishH;
+                assigmentR.TotalTime        = registro.TotalTime;
+            }
+
 
             return assigmentR;
 

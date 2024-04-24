@@ -99,7 +99,7 @@ namespace StopWatch
                 //Checamos si es que existe un registro con la misma hora inicial
                 assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
 
-                if (assigmentRecord != null)
+                if (assigmentRecord.Id != null)
                 {
                     //Aqui haremos el update
                     sAsig.updateAssigmentRecord(assigmentRecord, currentDateTime);
@@ -250,8 +250,8 @@ namespace StopWatch
         private void btn_obtener_Click(object sender, EventArgs e)
         {
             //sAsig.obtenerFechaHarcodeada();
-            assigmentRecordClass    assigmentRecord     = new assigmentRecordClass();
-            assigmentClass          assigment           = new assigmentClass();
+            assigmentRecordClass assigmentRecord = new assigmentRecordClass();
+            assigmentClass assigment = new assigmentClass();
 
             assigment = sAsig.obtenemosAssigmentSettings(cb_mainAction.SelectedItem.ToString());
 
@@ -260,6 +260,11 @@ namespace StopWatch
                 //Checamos si es que existe un registro con la misma hora inicial
                 assigmentRecord = sAsig.obtenerRegistroPorFecha(assigment, horaInicial);
             }
+        }
+
+        private void btnTestFunctions_Click(object sender, EventArgs e)
+        {
+            guardarAvance();
         }
     }
 }
