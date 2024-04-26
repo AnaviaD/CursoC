@@ -1,0 +1,15 @@
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\bin\Debug\net8.0\testFunctions.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\bin\Debug\net8.0\testFunctions.deps.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\bin\Debug\net8.0\testFunctions.runtimeconfig.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\bin\Debug\net8.0\testFunctions.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\bin\Debug\net8.0\testFunctions.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.AssemblyInfoInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.AssemblyInfo.cs
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.csproj.CoreCompileInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.sourcelink.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\refint\testFunctions.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\testFunctions.genruntimeconfig.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\testFunctions\obj\Debug\net8.0\ref\testFunctions.dll
