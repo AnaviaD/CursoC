@@ -98,3 +98,9 @@ C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\obj\Debug\net8.0\watchTest.pdb
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\obj\Debug\net8.0\watchTest.genruntimeconfig.cache
 C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\obj\Debug\net8.0\ref\watchTest.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\bin\Debug\net8.0\CoverletSourceRootsMapping_watchTest
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\bin\Debug\net8.0\testFunctions.deps.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\bin\Debug\net8.0\testFunctions.runtimeconfig.json
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\bin\Debug\net8.0\testFunctions.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\bin\Debug\net8.0\testFunctions.dll
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\unitTesting1Dir\unitTesting1\watchTest\watchTest\bin\Debug\net8.0\testFunctions.pdb
