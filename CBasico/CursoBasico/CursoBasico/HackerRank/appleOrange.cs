@@ -38,7 +38,23 @@ namespace CursoBasico.HackerRank
 
             public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
             {
+                int c_apple = 0;
+                int c_orange = 0;
 
+                foreach (int apl in apples)
+                {
+                    if ((a + apl) >= s && (apl + a) <= t)
+                    { c_apple++; }
+                }
+
+                foreach (int org in oranges)
+                {
+                    if ((b + org) >= s && (b + org) <= t)
+                    { c_orange++; }
+                }
+
+                Console.WriteLine(c_apple);
+                Console.WriteLine(c_orange);
             }
 
         }
