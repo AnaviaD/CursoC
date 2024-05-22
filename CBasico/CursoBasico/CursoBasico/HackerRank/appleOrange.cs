@@ -20,6 +20,32 @@ namespace CursoBasico.HackerRank
 {
     public class appleOrange
     {
+        public List<int> countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+        {
+            int c_apple = 0;
+            int c_orange = 0;
+            List<int> apples_oranges = new List<int>();
+
+            foreach (int apl in apples)
+            {
+                if ((a + apl) >= s && (apl + a) <= t)
+                { c_apple++; }
+            }
+
+            foreach (int org in oranges)
+            {
+                if ((b + org) >= s && (b + org) <= t)
+                { c_orange++; }
+            }
+
+            //Console.WriteLine(c_apple);
+            //Console.WriteLine(c_orange);
+
+            apples_oranges.Add(c_apple);
+            apples_oranges.Add(c_orange);
+
+            return apples_oranges;
+        }
 
         class Result
         {
@@ -36,57 +62,37 @@ namespace CursoBasico.HackerRank
              *  6. INTEGER_ARRAY oranges
              */
 
-            public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
-            {
-                int c_apple = 0;
-                int c_orange = 0;
-
-                foreach (int apl in apples)
-                {
-                    if ((a + apl) >= s && (apl + a) <= t)
-                    { c_apple++; }
-                }
-
-                foreach (int org in oranges)
-                {
-                    if ((b + org) >= s && (b + org) <= t)
-                    { c_orange++; }
-                }
-
-                Console.WriteLine(c_apple);
-                Console.WriteLine(c_orange);
-            }
 
         }
 
         class Solution
         {
-            public static void Main(string[] args)
-            {
-                string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
+            //public static void Main(string[] args)
+            //{
+            //    string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
 
-                int s = Convert.ToInt32(firstMultipleInput[0]);
+            //    int s = Convert.ToInt32(firstMultipleInput[0]);
 
-                int t = Convert.ToInt32(firstMultipleInput[1]);
+            //    int t = Convert.ToInt32(firstMultipleInput[1]);
 
-                string[] secondMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
+            //    string[] secondMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
 
-                int a = Convert.ToInt32(secondMultipleInput[0]);
+            //    int a = Convert.ToInt32(secondMultipleInput[0]);
 
-                int b = Convert.ToInt32(secondMultipleInput[1]);
+            //    int b = Convert.ToInt32(secondMultipleInput[1]);
 
-                string[] thirdMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
+            //    string[] thirdMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
 
-                int m = Convert.ToInt32(thirdMultipleInput[0]);
+            //    int m = Convert.ToInt32(thirdMultipleInput[0]);
 
-                int n = Convert.ToInt32(thirdMultipleInput[1]);
+            //    int n = Convert.ToInt32(thirdMultipleInput[1]);
 
-                List<int> apples = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(applesTemp => Convert.ToInt32(applesTemp)).ToList();
+            //    List<int> apples = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(applesTemp => Convert.ToInt32(applesTemp)).ToList();
 
-                List<int> oranges = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(orangesTemp => Convert.ToInt32(orangesTemp)).ToList();
+            //    List<int> oranges = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(orangesTemp => Convert.ToInt32(orangesTemp)).ToList();
 
-                Result.countApplesAndOranges(s, t, a, b, apples, oranges);
-            }
+            //    //Result.countApplesAndOranges(s, t, a, b, apples, oranges);
+            //}
         }
 
     }
