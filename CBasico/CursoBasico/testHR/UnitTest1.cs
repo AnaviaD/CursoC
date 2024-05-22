@@ -6,27 +6,29 @@ namespace testHR
     {
 
         private appleOrange appleOra;
+        private NumberLineJumps kangooro;
 
         [SetUp]
         public void Setup()
         {
             appleOra = new appleOrange();
+            kangooro = new NumberLineJumps();
         }
-            
+
         [Test]
         public void Test1()
         {
             Assert.Pass();
         }
 
-        [Test] 
+        [Test]
         public void TestAppleOrange()
         {
-            List<int> apples = new List<int> { -2, 2, 1};
-            List<int> oranges = new List<int> { 5, -6};
+            List<int> apples = new List<int> { -2, 2, 1 };
+            List<int> oranges = new List<int> { 5, -6 };
             List<int> r_list = new List<int>();
 
-            r_list.AddRange(appleOra.countApplesAndOranges(7, 11, 5, 15, apples, oranges ));
+            r_list.AddRange(appleOra.countApplesAndOranges(7, 11, 5, 15, apples, oranges));
 
             if (r_list.Count >= 2 && r_list[0] == 1 && r_list[1] == 1)
             {
@@ -38,5 +40,16 @@ namespace testHR
             }
 
         }
+
+        [Test]
+        public void TestKangaro()
+        {
+            if (kangooro.kangaroo(0, 2, 5, 3) == "NO")
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
+        }
+
     }
 }
