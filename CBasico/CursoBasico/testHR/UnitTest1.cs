@@ -7,18 +7,36 @@ namespace testHR
 
         private appleOrange appleOra;
         private NumberLineJumps kangooro;
+        private breakingRecords record;
 
         [SetUp]
         public void Setup()
         {
-            appleOra = new appleOrange();
-            kangooro = new NumberLineJumps();
+            appleOra    = new appleOrange();
+            kangooro    = new NumberLineJumps();
+            record      = new breakingRecords();
         }
 
         [Test]
         public void Test1()
         {
             Assert.Pass();
+        }
+
+        [Test]
+        public void TestBreakingR()
+        {
+            List<int> r_list        = new List<int> { 10, 5, 20, 20, 4, 5, 2, 25, 1 };
+            List<int> result_list   = new List<int> { 2, 4};
+            List<int> copy_list     = new List<int>();
+
+            copy_list.AddRange(record.breakingRecordsF(r_list));
+
+            if (copy_list[0] == result_list[0] && copy_list[1] == result_list[1])
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
