@@ -8,6 +8,7 @@ namespace testHR
         private appleOrange appleOra;
         private NumberLineJumps kangooro;
         private breakingRecords record;
+        private chocoBar        barC;
 
         [SetUp]
         public void Setup()
@@ -15,12 +16,29 @@ namespace testHR
             appleOra    = new appleOrange();
             kangooro    = new NumberLineJumps();
             record      = new breakingRecords();
+            barC        = new chocoBar();
         }
 
         [Test]
         public void Test1()
         {
             Assert.Pass();
+        }
+
+        [Test]
+        public void TestCBar()
+        {
+            List<int> r_list = new List<int> { 1, 2, 1, 3, 2 };
+            
+            int ans = 0;
+
+            ans = barC.birthday(r_list, 3, 2);
+
+            if (ans == 2)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
