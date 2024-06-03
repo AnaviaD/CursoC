@@ -9,6 +9,7 @@ namespace testHR
         private NumberLineJumps kangooro;
         private breakingRecords record;
         private chocoBar        barC;
+        private betweenTwSets   btwSets;
 
         [SetUp]
         public void Setup()
@@ -17,12 +18,30 @@ namespace testHR
             kangooro    = new NumberLineJumps();
             record      = new breakingRecords();
             barC        = new chocoBar();
+            btwSets     = new betweenTwSets();
         }
 
         [Test]
         public void Test1()
         {
             Assert.Pass();
+        }
+
+        [Test]
+        public void betweenTwoSets()
+        {
+            List<int> a_list = new List<int> { 2, 4 };
+            List<int> b_list = new List<int> { 16, 32, 96 };
+
+            int ans = 0;
+
+            ans = btwSets.getTotalX(a_list, b_list);
+
+            if (ans == 3)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
