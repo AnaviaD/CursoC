@@ -5,11 +5,12 @@ namespace testHR
     public class Tests
     {
 
-        private appleOrange appleOra;
-        private NumberLineJumps kangooro;
-        private breakingRecords record;
-        private chocoBar        barC;
-        private betweenTwSets   btwSets;
+        private appleOrange             appleOra;
+        private NumberLineJumps         kangooro;
+        private breakingRecords         record;
+        private chocoBar                barC;
+        private betweenTwSets           btwSets;
+        private divisibleSumPairs       divSPair;
 
         [SetUp]
         public void Setup()
@@ -19,12 +20,29 @@ namespace testHR
             record      = new breakingRecords();
             barC        = new chocoBar();
             btwSets     = new betweenTwSets();
+            divSPair    = new divisibleSumPairs();
         }
 
         [Test]
         public void Test1()
         {
             Assert.Pass();
+        }
+
+        [Test]
+        public void divSumPairs()
+        {
+            List<int> a_list = new List<int> { 1, 3, 2, 6, 1, 2 };
+
+            int ans, n = 6, k = 3;
+
+            ans = divSPair.divSum(n, k, a_list);
+
+            if (ans == 5)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
