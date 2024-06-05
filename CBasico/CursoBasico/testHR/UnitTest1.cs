@@ -12,18 +12,36 @@ namespace testHR
         private betweenTwSets           btwSets;
         private divisibleSumPairs       divSPair;
         private gradingStudnts          grdStdns;
+        private migratoryBrds           migratoryBBBB;
 
         [SetUp]
         public void Setup()
         {
-            appleOra    = new appleOrange();
-            kangooro    = new NumberLineJumps();
-            record      = new breakingRecords();
-            barC        = new chocoBar();
-            btwSets     = new betweenTwSets();
-            divSPair    = new divisibleSumPairs();
-            grdStdns    = new gradingStudnts();
-            
+            appleOra            = new appleOrange();
+            kangooro            = new NumberLineJumps();
+            record              = new breakingRecords();
+            barC                = new chocoBar();
+            btwSets             = new betweenTwSets();
+            divSPair            = new divisibleSumPairs();
+            grdStdns            = new gradingStudnts();
+            migratoryBBBB       = new migratoryBrds();
+
+
+        }
+
+        [Test]
+        public void migratoryBirds()
+        {
+            List<int> a_list = new List<int> { 1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4 };
+
+
+            int ans = migratoryBBBB.migratoryBirds(a_list);
+
+            if (ans == 3)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
