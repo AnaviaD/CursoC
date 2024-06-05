@@ -11,6 +11,7 @@ namespace testHR
         private chocoBar                barC;
         private betweenTwSets           btwSets;
         private divisibleSumPairs       divSPair;
+        private gradingStudnts          grdStdns;
 
         [SetUp]
         public void Setup()
@@ -21,12 +22,31 @@ namespace testHR
             barC        = new chocoBar();
             btwSets     = new betweenTwSets();
             divSPair    = new divisibleSumPairs();
+            grdStdns    = new gradingStudnts();
+            
         }
 
         [Test]
         public void Test1()
         {
             Assert.Pass();
+        }
+
+        [Test]
+        public void gradStud()
+        {
+            List<int> a_list = new List<int> { 73, 67, 38, 33 };
+            List<int> b_list = new List<int> { 75, 67, 40, 33 };
+
+            List<int> ans = new List<int>();
+
+            ans = grdStdns.gradingStudents(a_list);
+
+            if (ans.SequenceEqual(b_list))
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
