@@ -13,6 +13,7 @@ namespace testHR
         private divisibleSumPairs       divSPair;
         private gradingStudnts          grdStdns;
         private migratoryBrds           migratoryBBBB;
+        private billDiv                 billDivvv;
 
         [SetUp]
         public void Setup()
@@ -25,8 +26,25 @@ namespace testHR
             divSPair            = new divisibleSumPairs();
             grdStdns            = new gradingStudnts();
             migratoryBBBB       = new migratoryBrds();
+            billDivvv           = new billDiv();
 
 
+        }
+
+
+        [Test]
+        public void billDivisition()
+        {
+            List<int> a_list = new List<int> { 3, 10, 2, 9 };
+
+
+            int ans = billDivvv.bonAppetit(a_list, 1, 12);
+
+            if (ans == 5)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
