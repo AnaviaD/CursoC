@@ -14,6 +14,7 @@ namespace testHR
         private gradingStudnts          grdStdns;
         private migratoryBrds           migratoryBBBB;
         private billDiv                 billDivvv;
+        private salesByMach             salesbMachT;
 
         [SetUp]
         public void Setup()
@@ -27,9 +28,26 @@ namespace testHR
             grdStdns            = new gradingStudnts();
             migratoryBBBB       = new migratoryBrds();
             billDivvv           = new billDiv();
+            salesbMachT         = new salesByMach();
 
 
 
+        }
+
+
+        [Test]
+        public void salesByMachTest()
+        {
+            List<int> a_list = new List<int> { 10, 20, 20, 10, 10, 30, 50, 10, 20 };
+
+
+            int ans = salesbMachT.sockMerchant(9, a_list);
+
+            if (ans == 3)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
 
