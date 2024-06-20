@@ -16,6 +16,7 @@ namespace testHR
         private billDiv                 billDivvv;
         private salesByMach             salesbMachT;
         private drowBook                drawBook;
+        private ValleysCount            vallCount;
 
         [SetUp]
         public void Setup()
@@ -31,8 +32,24 @@ namespace testHR
             billDivvv           = new billDiv();
             salesbMachT         = new salesByMach();
             drawBook            = new drowBook();
+            vallCount           = new ValleysCount();
 
 
+        }
+
+
+
+        [Test]
+        public void valleyCount()
+        {
+            string path = "DDUUDDUDUUUD";
+            int ans = vallCount.countingValleys(12, path);
+
+            if (ans == 2)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
 
