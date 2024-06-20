@@ -15,6 +15,7 @@ namespace testHR
         private migratoryBrds           migratoryBBBB;
         private billDiv                 billDivvv;
         private salesByMach             salesbMachT;
+        private drowBook                drawBook;
 
         [SetUp]
         public void Setup()
@@ -29,9 +30,23 @@ namespace testHR
             migratoryBBBB       = new migratoryBrds();
             billDivvv           = new billDiv();
             salesbMachT         = new salesByMach();
+            drawBook            = new drowBook();
 
 
+        }
 
+
+        [Test]
+        public void drowBookTest()
+        {
+
+            int ans = drawBook.pageCount(6, 2);
+
+            if (ans == 1)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
 
