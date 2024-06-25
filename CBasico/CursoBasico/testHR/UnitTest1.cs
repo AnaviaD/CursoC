@@ -17,6 +17,7 @@ namespace testHR
         private salesByMach             salesbMachT;
         private drowBook                drawBook;
         private ValleysCount            vallCount;
+        private electronicsShop         electroSp;
 
         [SetUp]
         public void Setup()
@@ -33,10 +34,28 @@ namespace testHR
             salesbMachT         = new salesByMach();
             drawBook            = new drowBook();
             vallCount           = new ValleysCount();
+            electroSp           = new electronicsShop();
 
 
         }
 
+        [Test]
+        public void electronicShops()
+        {
+            int[] keyboards = { 3, 1 };
+            int[] drives = { 5, 2, 8 };
+            int b = 10;
+
+            int ans = 0;
+
+            ans = electroSp.getMoneySpent(keyboards, drives, b);
+
+            if (ans == 9)
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
+        }
 
 
         [Test]
