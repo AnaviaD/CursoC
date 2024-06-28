@@ -18,6 +18,7 @@ namespace testHR
         private drowBook                drawBook;
         private ValleysCount            vallCount;
         private electronicsShop         electroSp;
+        private catsAndMouseCCC         catsAndM;
 
         [SetUp]
         public void Setup()
@@ -35,8 +36,24 @@ namespace testHR
             drawBook            = new drowBook();
             vallCount           = new ValleysCount();
             electroSp           = new electronicsShop();
+            catsAndM            = new catsAndMouseCCC();
 
 
+        }
+
+
+        [Test]
+        public void mousesAndCats()
+        {
+            string winn = "";
+
+            winn = catsAndM.catAndMouse(1, 2, 3);
+
+            if (winn == "Cat B")
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
         }
 
         [Test]
