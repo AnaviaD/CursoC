@@ -3,7 +3,10 @@ namespace CursoBasico.Seccion09Clases
 {
     public class Clase
     {
+        //Campo
         public int Campo;
+
+        //Propiedad
         public string Nombre { get; set; }
         public string Apellido { get; set; }
 
