@@ -61,5 +61,21 @@ namespace CursoBasico.POO_01.Clase_Estructura
             Flexibilidad:           Las propiedades pueden implementar lógica adicional que los campos no pueden.
         */
 
+        /*  Niveles de acceso */
+
+
+        //Todos pueden acceder a esta variable
+        public string Telefono;
+
+        //Solo los miembros de la clase
+        private int Edad;
+
+        //Solo se puede acceder en el mismo ensamblado
+        internal string interno;
+
+        //Solo clases derivadas pueden acceder a estas variables
+        protected string protegido;
+
+
     }
 }
