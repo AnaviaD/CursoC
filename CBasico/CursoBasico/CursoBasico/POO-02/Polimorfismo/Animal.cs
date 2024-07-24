@@ -12,7 +12,7 @@ namespace CursoBasico.POO_02.Polimorfismo
 
 
         /*
-         * Implementacion o utilidad de el polimorfismo
+         * Implementacion o utilidad de el polimorfismo 
          */
 
         //Perro p = new Perro();
@@ -27,5 +27,5 @@ namespace CursoBasico.POO_02.Polimorfismo
         //    animal.HacerRuido();
         //}
 
-}
+    }
 }
