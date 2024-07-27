@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CriptoEgipto.Controller;
+using System;
 using System.Timers;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -12,16 +13,22 @@ namespace CriptoEgipto
         private System.Windows.Forms.Timer progressTimer;
         private int progressBarValue;
         private int lapseProgressBarSeg = 30;//30 seg
+        GetTest apicall = new GetTest();
 
         public Home()
         {
             InitializeComponent();
             InitializeTimers();
+            InitializeClases();
+        }
+
+        private void InitializeClases()
+        {
         }
 
         private void btnGetTest_Click(object sender, EventArgs e)
         {
-
+            apicall.btnGetData_ClickAsync();
         }
 
         private void pbMainProgressBar_Click(object sender, EventArgs e)
