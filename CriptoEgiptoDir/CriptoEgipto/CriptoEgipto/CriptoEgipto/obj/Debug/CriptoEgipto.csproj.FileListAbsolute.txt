@@ -1,0 +1,10 @@
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.csproj.AssemblyReference.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.Home.resources
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.Properties.Resources.resources
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.csproj.GenerateResource.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.csproj.CoreCompileInputs.cache
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\bin\Debug\CriptoEgipto.exe.config
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\bin\Debug\CriptoEgipto.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\bin\Debug\CriptoEgipto.pdb
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.exe
+C:\Users\anavi\Desktop\Projects\CursoCSharp\CursoC\CriptoEgiptoDir\CriptoEgipto\CriptoEgipto\CriptoEgipto\obj\Debug\CriptoEgipto.pdb
