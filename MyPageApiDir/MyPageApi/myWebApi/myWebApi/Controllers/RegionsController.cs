@@ -102,7 +102,7 @@ namespace myWebApi.Controllers
         //PUT: https://localhost:portnumber/api/regions/{id}
         [HttpPut]
         [Route("{id:Guid}")]
-        public IActionResult UpdateRegion([FromBody] Guid id, [FromBody] UpdateRegionRequest updatReq)
+        public IActionResult UpdateRegion([FromRoute] Guid id, [FromBody] UpdateRegionRequest updatReq)
         {
             //check if region Exist
             var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
@@ -128,6 +128,25 @@ namespace myWebApi.Controllers
             return Ok(regionDto);
 
         }
+
+
+        //Delete Region
+        //Delete: https://localhost:portnumber/api/regions/{id}
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public IActionResult DeleteRegion([FromRoute] Guid id) 
+        {
+            var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+
+            if (regionDomainModel == null) return NotFound();
+
+            //Delete Region
+            dbContext.Regions.Remove(regionDomainModel);
+            dbContext.SaveChanges();
+
+            return Ok();
+        }
+
 
     }
 }
