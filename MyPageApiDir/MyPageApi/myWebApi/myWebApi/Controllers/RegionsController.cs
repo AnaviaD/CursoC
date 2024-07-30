@@ -98,5 +98,36 @@ namespace myWebApi.Controllers
             return CreatedAtAction(nameof(GetById), new { Id = regionDomainModel.Id }, regionDomainModel);
         }
 
+        //Update Region
+        //PUT: https://localhost:portnumber/api/regions/{id}
+        [HttpPut]
+        [Route("{id:Guid}")]
+        public IActionResult UpdateRegion([FromBody] Guid id, [FromBody] UpdateRegionRequest updatReq)
+        {
+            //check if region Exist
+            var regionDomainModel = dbContext.Regions.FirstOrDefault(x => x.Id == id);
+
+            if(regionDomainModel == null) return NotFound();
+
+            //Map DTO to Domain model
+            regionDomainModel.Name              = updatReq.Name;
+            regionDomainModel.Code              = updatReq.Code;
+            regionDomainModel.RegionImageUrl    = updatReq.RegionImageUrl;
+
+            dbContext.SaveChanges();
+
+            //Convert Domain Model to Dto
+            var regionDto = new RegionDTO
+            {
+                Id = regionDomainModel.Id,
+                Name = regionDomainModel.Name,
+                Code = regionDomainModel.Code,
+                RegionImageUrl = regionDomainModel.RegionImageUrl,
+            };
+
+            return Ok(regionDto);
+
+        }
+
     }
 }
