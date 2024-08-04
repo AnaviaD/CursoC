@@ -34,5 +34,29 @@ namespace CriptoEgipto.Controller
             string responseData = await response.Content.ReadAsStringAsync();
             return responseData;
         }
+
+        /*
+         * public async Task btnGetData_ClickAsync()
+        {
+            string apiUrl = "https://api.example.com/data"; // Reemplaza esto con la URL de tu API
+            try
+            {
+                string response = await GetApiDataAsync(apiUrl);
+                await Console.Out.WriteLineAsync(response);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private async Task<string> GetApiDataAsync(string url)
+        {
+            HttpResponseMessage response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            string responseData = await response.Content.ReadAsStringAsync();
+            return responseData;
+        }
+         */
     }
 }
