@@ -26,17 +26,18 @@ namespace CursoBasico.HackerRank
             int c_orange = 0;
             List<int> apples_oranges = new List<int>();
 
-            foreach (int apl in apples)
-            {
-                if ((a + apl) >= s && (apl + a) <= t)
-                { c_apple++; }
-            }
-
             foreach (int org in oranges)
             {
                 if ((b + org) >= s && (b + org) <= t)
                 { c_orange++; }
             }
+            foreach (int apl in apples)
+            {
+                if ((a + apl) >= s && (apl + a) <= t)
+                { c_apple++; }
+
+            }
+
 
             //Console.WriteLine(c_apple);
             //Console.WriteLine(c_orange);
