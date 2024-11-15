@@ -16,7 +16,7 @@ namespace CursoBasico.POO_04.ClasesOrientadoAObjetos
 
         public void SetX(int value)
         {
-            if (x < 100){
+            if (value < 100){
                 this.x = value;
             }else{
                 throw new ArgumentOutOfRangeException();
@@ -25,7 +25,7 @@ namespace CursoBasico.POO_04.ClasesOrientadoAObjetos
 
         public void SetY(int value)
         {
-            if (x < 100)
+            if (value < 100)
             {
                 this.y = value;
             }

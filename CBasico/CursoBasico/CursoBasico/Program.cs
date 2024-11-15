@@ -11,14 +11,24 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        CuentaBancaria cuenta = new CuentaBancaria();
+        //Gato04 gato04 = new Gato04();
+        //gato04.HacerRuido();
 
-        cuenta.saldo = 150;
+        //Perro04 perro04 = new Perro04();
+        //perro04.HacerRuido();
 
-        Console.WriteLine("Cuenta.Saldo \n");
-        Console.WriteLine(cuenta.saldo);
-        Console.WriteLine("Cuenta.MostrarSaldo \n");
+        //Lobo04 lobo04 = new Lobo04();
+        //perro04.HacerRuido();
 
+        //List<Animal04> zoo  = new List<Animal04>();
+        //zoo.Add(gato04);
+        //zoo.Add(perro04);
+        //zoo.Add(lobo04);
+
+        //foreach (Animal04 animal in zoo)
+        //{
+        //    animal.HacerRuido();
+        //}
     }
 
 }
