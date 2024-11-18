@@ -5,30 +5,40 @@ using CursoBasico.POO_01.ClaseAbstracta_Interfaz;
 using CursoBasico.POO_02.Encapsulacion;
 using CursoBasico.POO_02.Polimorfismo;
 using CursoBasico.POO_03.BasicShit;
+using CursoBasico.POO_04.ClasesII;
 using CursoBasico.POO_04.ClasesOrientadoAObjetos;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        //Gato04 gato04 = new Gato04();
-        //gato04.HacerRuido();
+        Point04 punto = new Point04();
+        punto.X = 10;
+        punto.Y = 10;
 
-        //Perro04 perro04 = new Perro04();
-        //perro04.HacerRuido();
+        PointStruc04 pointStruc04 = new PointStruc04();
+        pointStruc04.X = 5;
+        pointStruc04.Y = 5;
 
-        //Lobo04 lobo04 = new Lobo04();
-        //perro04.HacerRuido();
+        SumaCoordenadas(punto);
+        SumarCoordenadas(pointStruc04);
 
-        //List<Animal04> zoo  = new List<Animal04>();
-        //zoo.Add(gato04);
-        //zoo.Add(perro04);
-        //zoo.Add(lobo04);
+        Console.WriteLine($"Suma de coordenadas clase : x={punto.X}  y={punto.Y} ");
+        Console.WriteLine($"Suma de coordenadas struct : x={pointStruc04.X}  y={pointStruc04.Y} ");
+        Console.ReadKey();
 
-        //foreach (Animal04 animal in zoo)
-        //{
-        //    animal.HacerRuido();
-        //}
     }
+
+    public static void SumaCoordenadas(Point04 punto)
+    {
+        punto.X += 10;
+        punto.Y += 10;
+    }
+    public static void SumarCoordenadas(PointStruc04 punto)
+    {
+        punto.X += 15;
+        punto.Y += 15;
+    }
+
 
 }
