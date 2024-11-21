@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoBasico.POO_04.elementosDeUnaClase04
 {
-    internal class campoVsPropiedad
+    public class campoVsPropiedad
     {
     }
 }
