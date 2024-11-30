@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace CursoBasico.POO_04.Interface
 {
-    public class ejemplo04 : IReaTable
+    public class ejemplo04 : IReaTable, IDisposable
     {
+        public void Dispose()
+        {            
+            GC.SuppressFinalize(this);
+        }
+
         public bool Equals(Task obj)
         {
             throw new NotImplementedException();
