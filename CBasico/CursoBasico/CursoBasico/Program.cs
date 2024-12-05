@@ -12,11 +12,11 @@ using System.Reflection;
 public class Program
 {
     //Declaramos el metodo delegado
-    public delegate void Del(string message);
+    public delegate void Printer(string message);
 
     private static void Main(string[] args)
     {
-        
 
     }
+
 }
