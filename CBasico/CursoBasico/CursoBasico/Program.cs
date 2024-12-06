@@ -5,21 +5,24 @@ public class Program
 {  
     private static async Task Main(string[] args)
     {
+        try
+        {
+            Console.Out.WriteLineAsync("Inicializamos el programa");
 
-        Console.Out.WriteLineAsync("Inicializamos el programa");
+            AsyncWithErrorClass1 asy = new AsyncWithErrorClass1();
 
-        SecondExcerAsync excerc = new SecondExcerAsync();
+            await asy.callMethodTry();
 
-        var task01 = excerc.PrintFirstText();
+        }
+        catch (Exception ex) 
+        {
+            await Console.Out.WriteLineAsync($"El error es este hdp: {ex.Message}");
+        }
+        finally 
+        {
+            Console.Out.WriteLineAsync("Finaliza el programa:");
+        }
 
-        var task02 = excerc.PrintSecondText();
-
-        var results = await Task.WhenAll(task01, task02);
-
-        Console.Out.WriteLineAsync($"Resultado 1: {results[0]}");
-        Console.Out.WriteLineAsync($"Resultado 2: {results[1]}");
-
-        await Console.Out.WriteLineAsync("Todas las tareas completadas");
 
     }
 }
