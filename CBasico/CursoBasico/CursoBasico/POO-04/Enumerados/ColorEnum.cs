@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace CursoBasico.POO_04.Enumerados
 {
+
+    //Sirven para no harcodear valores
    enum ColorE
     {
         Rojo,
