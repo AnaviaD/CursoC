@@ -13,7 +13,8 @@ namespace CursoBasico.Asincrona
         {
             Console.Out.WriteLineAsync("Inicializamos primera funcion");
 
-            await Task.Delay(1000);
+            await Task.Delay(2000);
+
             Console.Out.WriteLineAsync("Terminamos primer proceso pero esperamos");
 
             return "Finaliza primer metodo";
@@ -25,6 +26,7 @@ namespace CursoBasico.Asincrona
             Console.Out.WriteLineAsync("Inicia el segundo funcion");
 
             await Task.Delay(2000);
+
             Console.Out.WriteLineAsync("Terminamos segundo proceso pero esperamos");
 
             return "Terminamos el segundo metodo";

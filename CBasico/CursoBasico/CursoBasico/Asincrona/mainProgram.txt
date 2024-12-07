@@ -1,0 +1,57 @@
+﻿using CursoBasico.Asincrona;
+using CursoBasico.POO_04.Enumerados;
+using System.Diagnostics;
+
+public class Program
+{  
+    private static async Task Main(string[] args)
+    {
+        
+        Stopwatch stopwatch = new Stopwatch();
+
+        // Inicia el cronómetro
+        stopwatch.Start();            
+
+        try
+        {
+
+            Console.Out.WriteLineAsync("Inicializamos el programa");
+
+            AsyncWithErrorClass1 asy = new AsyncWithErrorClass1();
+
+            SecondExcerAsync asy2 = new SecondExcerAsync();
+
+
+
+            var task01 = asy2.PrintFirstText();
+            
+            var task02 = asy2.PrintSecondText();
+
+            var task03 = asy.callMethodTry();
+
+            var allTask = await Task.WhenAll(task01, task02, task03);
+
+            await Console.Out.WriteLineAsync($"primer task: {allTask[0]}");
+
+            await Console.Out.WriteLineAsync($"segundo task: {allTask[1]}");
+
+            await Console.Out.WriteLineAsync($"3er task: {allTask[2]}");
+
+
+        }
+        catch (Exception ex) 
+        {
+            await Console.Out.WriteLineAsync($"El error es este hdp: {ex.Message}");
+        }
+        finally 
+        {
+            Console.Out.WriteLineAsync("Finaliza el programa:");
+        }
+
+        // Detiene el cronómetro
+        stopwatch.Stop();
+
+        Console.WriteLine($"El tiempo de ejecución fue: {stopwatch.ElapsedMilliseconds} ms");
+
+    }
+}

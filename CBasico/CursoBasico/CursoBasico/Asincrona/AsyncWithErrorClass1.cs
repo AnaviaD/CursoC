@@ -8,14 +8,16 @@ namespace CursoBasico.Asincrona
 {
     public class AsyncWithErrorClass1
     {
-        public async Task callMethodTry()
+        public async Task<string> callMethodTry()
         {
 
             Console.Out.WriteLineAsync("Iniciando el proceso");
 
-            await Task.Delay(4000);
+            await Task.Delay(3000);
 
             throw new Exception("Encontramos un error 156846 ");
+
+            return "finalizado";
 
         }
     }
